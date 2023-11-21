@@ -1,7 +1,7 @@
 {
   "name": "jewelry-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "Headless Shopify Store using next.js",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
