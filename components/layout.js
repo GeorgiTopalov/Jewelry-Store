@@ -1,13 +1,15 @@
 import React from "react";
+import Link from 'next/link';
+
 
 const Layout = ({ children }) => {
   return (
     <div>
       <header id="top">
           <h2 className="brand-name">
-            <a href="/index">ARAIYA</a>
+            <Link href="/index">ARAIYA</Link>
           </h2>
-          <a href="#" id="mainMenuOpen">
+          <Link href="#" id="mainMenuOpen">
             <svg
               class="hamburger"
               xmlns="http://www.w3.org/2000/svg"
@@ -24,24 +26,28 @@ const Layout = ({ children }) => {
                 stroke-linecap="round"
               />
             </svg>
-          </a>
-        <nav>
+          </Link>
+        <nav >
           <ul>
             <li>
-              <a href="" />
+              <Link href="/engagement" className="nav-item">
               Engagement
+              </Link>
             </li>
             <li>
-              <a href="" />
+              <Link href="/wedding" className="nav-item">
               Wedding
+              </Link>
             </li>
             <li>
-              <a href="" />
+              <Link href="gifts" className="nav-item">
               Gifts
+              </Link>
             </li>
             <li>
-              <a href="" />
+              <Link href="collections" className="nav-item">
               Collections
+              </Link>
             </li>
           </ul>
         </nav>
@@ -49,7 +55,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <footer id="footer">
         <div>
-          
+
         </div>
       </footer>
     </div>
