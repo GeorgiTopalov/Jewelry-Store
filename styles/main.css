@@ -50,8 +50,8 @@ h6 {
 #top {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin: 0.5rem 2rem;
 }
 
@@ -62,7 +62,9 @@ h6 {
   width: 100vw;
 }
 
-
+#mainMenuOpen svg {
+  margin-top: 12px;
+}
 
 .brand-name {
   font-family: var(--sans-serif);
