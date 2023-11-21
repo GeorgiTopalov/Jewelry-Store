@@ -3,22 +3,55 @@ import React from "react";
 const Layout = ({ children }) => {
   return (
     <div>
-      <header>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Learning Web" />
-        <meta name="keywords" content="wild, paws, dog, food" />
-        <meta name="author" content="Georgi Topalov" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Poppins&display=swap"
-          rel="stylesheet"
-        />
+      <header id="top">
+          <h2 className="brand-name">
+            <a href="/index">ARAIYA</a>
+          </h2>
+          <a href="#" id="mainMenuOpen">
+            <svg
+              class="hamburger"
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <path d="M4.5 7.5H25.5" stroke-width="3" stroke-linecap="round" />
+              <path d="M4.5 15H25.5" stroke-width="3" stroke-linecap="round" />
+              <path
+                d="M4.5 22.5H25.5"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="" />
+              Engagement
+            </li>
+            <li>
+              <a href="" />
+              Wedding
+            </li>
+            <li>
+              <a href="" />
+              Gifts
+            </li>
+            <li>
+              <a href="" />
+              Collections
+            </li>
+          </ul>
+        </nav>
       </header>
       <main>{children}</main>
-      <footer>{/* Footer content */}</footer>
+      <footer id="footer">
+        <div>
+          
+        </div>
+      </footer>
     </div>
   );
 };
