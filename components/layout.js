@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <footer id="footer">
         <div className="newsletter">
-          <h3>Sign up for our newsletter!</h3>
+          <h3>Sign up for our Newsletter!</h3>
           <p>
             Be the first to hear about any of our new arrivals, promotions and
             exclusive offers!
