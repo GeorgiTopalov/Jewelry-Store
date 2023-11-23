@@ -203,6 +203,7 @@ header svg {
   border: 1px solid black;
   color: white;
   background-color: black;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -421,6 +422,7 @@ input:focus {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 1.5fr;
     grid-template-rows: 1fr repeat(2, auto);
+    padding: 1rem 2rem 1rem 2rem;
   }
 
   .customer-care {
