@@ -4,7 +4,7 @@ import CollapsibleSection from "./collabsibleSection";
 
 const Layout = ({ children }) => {
   const customerCareLinks = [
-    { href: "/", text: "Contact Us" },
+    { href: "/contactus", text: "Contact Us" },
     { href: "/", text: "FAQ" },
     { href: "/", text: "Delivery" },
     { href: "/", text: "Track your order" },
@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
   const aboutUsLinks = [
     { href: "/", text: "Our Story" },
     { href: "/", text: "Our Partners" },
+    { href: "/", text: "Blog" },
     { href: "/", text: "Certificates" },
   ];
 
@@ -49,17 +50,27 @@ const Layout = ({ children }) => {
           <ul>
             <li>
               <Link href="/engagement" className="nav-item">
-                Engagement
+                Rings
               </Link>
             </li>
             <li>
               <Link href="/wedding" className="nav-item">
-                Wedding
+                Earrings
               </Link>
             </li>
             <li>
               <Link href="gifts" className="nav-item">
-                Gifts
+                Necklaces
+              </Link>
+            </li>
+            <li>
+              <Link href="gifts" className="nav-item">
+                Bracelets
+              </Link>
+            </li>
+            <li>
+              <Link href="gifts" className="nav-item">
+                Charms
               </Link>
             </li>
             <li>

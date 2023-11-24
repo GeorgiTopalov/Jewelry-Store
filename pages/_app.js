@@ -1,4 +1,6 @@
 import '../styles/main.css'; 
+import "../styles/contact.css"
+
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
