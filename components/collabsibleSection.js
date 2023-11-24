@@ -7,7 +7,7 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
   useEffect(() => {
     const checkWidth = () => {
       const screenWidth = window.innerWidth;
-      setIsOpen(screenWidth >= 768);
+      setIsOpen(screenWidth >= 800);
     };
 
     checkWidth();
@@ -30,7 +30,9 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
 
   return (
     <div className={className}>
-      <h3 onClick={toggleOpen}>{title}</h3>
+      <h3 onClick={toggleOpen}>
+        {title}
+        <span className={`toggle-icon ${isOpen ? 'open' : ''}`}></span></h3>
       <ul
         style={{
           maxHeight: isOpen ? "500px" : "0",

@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
           <Link href="/">Check our Christmas promotions - Up To 40% OFF!</Link>
         </div>
         <h2 className="brand-name">
-          <Link href="/index">ARAIYA</Link>
+          <Link href="/">ARAIYA</Link>
         </h2>
         <Link href="#" id="mainMenuOpen">
           <svg
