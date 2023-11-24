@@ -62,16 +62,19 @@ img {
   grid-row-gap: 0px;
 }
 
-.promotion-bar {
+ .promotion-bar {
   grid-area: 1 / 1 / 2 / 3;
-  background-color: var(--primary-color);
+  background-color: var(--black);
   width: 100vw;
-  color: var(--black);
   font-family: var(--sans);
   display: flex;
   justify-content: center;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+#top .promotion-bar a {
+  color: white;
 }
 
 #top a {
