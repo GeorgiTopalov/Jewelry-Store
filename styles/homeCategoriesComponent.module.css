@@ -1,0 +1,77 @@
+#grid {
+  margin-top: 1rem;
+  height: 400px;
+  transition: 500ms;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
+
+.rings {
+  background-image: url('../public/Ring-sample2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.earrings {
+  background-image: url('../public/earrings-sample1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.bracelets {
+  background-image: url('../public/bracelet-sample1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+:where(.rings, .earrings, .bracelets) {
+  transition: 300ms;
+}
+
+/* :where(.rings, .earrings, .bracelets):hover {
+    background: crimson; 
+} */
+
+:where(.rings):hover {
+  background-image: url('../public/wearing-ring-sample1.jpg') 
+}
+
+:where(.earrings):hover {
+  background-image: url('../public/wearing-earrings-sample1.jpg') 
+}
+
+:where(.bracelets):hover {
+  background-image: url('../public/wearing-bracelet-sample1.jpg') 
+}
+
+#grid:has(.rings:hover) {
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+}
+
+#grid:has(.earrings:hover) {
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+
+#grid:has(.bracelets:hover) {
+  grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+
+.categories {
+  margin: 2rem 0 2rem 0;
+}
+
+.categnames {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: var(--sans-serif);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--h3);
+  font-family: var(--sans-serif);
+}
