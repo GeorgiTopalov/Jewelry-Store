@@ -5,15 +5,15 @@ import CollapsibleSection from "./collabsibleSection";
 const Layout = ({ children }) => {
   const customerCareLinks = [
     { href: "/contactus", text: "Contact Us" },
-    { href: "/", text: "FAQ" },
+    { href: "/faq", text: "FAQ" },
     { href: "/", text: "Delivery" },
     { href: "/", text: "Track your order" },
   ];
 
   const aboutUsLinks = [
-    { href: "/", text: "Our Story" },
+    { href: "/ourstory", text: "Our Story" },
     { href: "/", text: "Our Partners" },
-    { href: "/", text: "Blog" },
+    { href: "/blog", text: "Blog" },
     { href: "/", text: "Certificates" },
   ];
 
@@ -91,8 +91,8 @@ const Layout = ({ children }) => {
           </p>
           <form className="input-row">
             <label></label>
-            <input></input>
-            <button className="btn form-btn">Sign Up</button>
+            <input placeholder="Email"></input>
+            <button className="btn form-btn" type="submit">Sign Up</button>
           </form>
         </div>
         <CollapsibleSection
