@@ -202,8 +202,12 @@ header svg {
 }
 
 .hero-content-bottom {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;  
   font-family: var(--serif);
   padding-bottom: 20px;
+  justify-content: center;
 }
 
 .btn {
@@ -315,7 +319,7 @@ input:focus {
 .input-col {
   display:flex;
   flex-flow: column wrap;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .input-msg {
@@ -475,6 +479,10 @@ input:focus {
     padding: 10px 20px 10px 20px;
     justify-content: center;
     padding-left: 8rem;
+  }
+
+  .hero-content-bottom {
+    align-items: flex-start;
   }
 
   .customer-care ul,
