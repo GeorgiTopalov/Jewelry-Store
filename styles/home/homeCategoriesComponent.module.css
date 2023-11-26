@@ -8,19 +8,19 @@
 }
 
 .rings {
-  background-image: url('../public/Ring-sample2.jpg');
+  background-image: url('../../public/Ring-sample2.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .earrings {
-  background-image: url('../public/earrings-sample1.jpg');
+  background-image: url('../../public/earrings-sample1.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .bracelets {
-  background-image: url('../public/bracelet-sample1.jpg');
+  background-image: url('../../public/bracelet-sample1.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -34,15 +34,15 @@
 } */
 
 :where(.rings):hover {
-  background-image: url('../public/wearing-ring-sample1.jpg') 
+  background-image: url('../../public/wearing-ring-sample1.jpg') 
 }
 
 :where(.earrings):hover {
-  background-image: url('../public/wearing-earrings-sample1.jpg') 
+  background-image: url('../../public/wearing-earrings-sample1.jpg') 
 }
 
 :where(.bracelets):hover {
-  background-image: url('../public/wearing-bracelet-sample1.jpg') 
+  background-image: url('../../public/wearing-bracelet-sample1.jpg') 
 }
 
 #grid:has(.rings:hover) {
@@ -61,7 +61,7 @@
   margin: 2rem 0 2rem 0;
 }
 
-.categnames {
+.category-names {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;

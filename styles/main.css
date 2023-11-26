@@ -172,43 +172,7 @@ header svg {
   margin: 0 0.5em 0.5em;
 }
 
-.hero-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/Hero-mob.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 65vh;
-}
 
-.hero-content {
-  display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  text-align: center;
-  color: white;
-  padding: 1.5rem 0.5rem 1.5rem 0.5rem;
-  justify-content: space-between;
-}
-
-.hero-content h1 {
-  font-size: var(--h1);
-  font-family: var(--sans-serif);
-  font-stretch: normal;
-  letter-spacing: 0.5px;
-  margin: 0;
-  margin-bottom: 1%;
-  line-height: 1.25;
-}
-
-.hero-content-bottom {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;  
-  font-family: var(--serif);
-  padding-bottom: 20px;
-  justify-content: center;
-}
 
 .btn {
   border: 1px solid black;
@@ -468,22 +432,7 @@ input:focus {
   #top nav li{
     border:none;
   }
-  .hero-img {
-    background-image: url("../public/Hero-wbg.jpg");
-  }
-
-  .hero-content {
-    max-width: 600px;
-    text-align: start;
-    color: var(--black);
-    padding: 10px 20px 10px 20px;
-    justify-content: center;
-    padding-left: 8rem;
-  }
-
-  .hero-content-bottom {
-    align-items: flex-start;
-  }
+  
 
   .customer-care ul,
   .aboutus ul,
