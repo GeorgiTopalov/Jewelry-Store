@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/homeCategoriesComponent.module.css";
+import styles from "../../styles/homeCategoriesComponent.module.css";
 
 const HomeCategoriesComponent = () => {
   return (
