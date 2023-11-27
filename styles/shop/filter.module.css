@@ -1,0 +1,34 @@
+/* FilterSection.module.css */
+
+.filter-section {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    font-family: Arial, sans-serif; /* Adjust to match your design */
+  }
+  
+  .category {
+    margin-bottom: 15px;
+  }
+  
+  .category-title {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .options {
+    padding: 0 20px;
+  }
+  
+  .option {
+    display: block;
+    margin: 5px 0;
+  }
+  
