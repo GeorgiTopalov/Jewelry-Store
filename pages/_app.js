@@ -1,5 +1,4 @@
 import '../styles/main.css'; 
-import "../styles/contact.css";
 import "../styles/productdetails.css"
 
 
