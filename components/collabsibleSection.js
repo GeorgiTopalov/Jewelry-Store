@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import styles from "../styles/layout/collapsibleSection.module.css";
 
 const CollapsibleSection = ({ title, links, additionalClass }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,11 +29,12 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
     additionalClass || ""
   }`;
 
+  const toggleIconClass = `${styles['toggle-icon']} ${isOpen ? styles['open'] : ''}`;
   return (
     <div className={className}>
       <h3 onClick={toggleOpen}>
         {title}
-        <span className={`toggle-icon ${isOpen ? 'open' : ''}`}></span></h3>
+        <span className={toggleIconClass}></span></h3>
       <ul
         style={{
           maxHeight: isOpen ? "500px" : "0",
