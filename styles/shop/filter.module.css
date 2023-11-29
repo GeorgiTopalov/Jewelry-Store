@@ -1,34 +1,105 @@
 /* FilterSection.module.css */
 
-.filter-section {
-    height: 100vh;
-    overflow-y: auto;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-    font-family: Arial, sans-serif; /* Adjust to match your design */
-  }
-  
-  .category {
-    margin-bottom: 15px;
-  }
-  
-  .category-title {
-    background: none;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .options {
-    padding: 0 20px;
-  }
-  
-  .option {
-    display: block;
-    margin: 5px 0;
-  }
-  
+
+.filter-checkbox {
+  display: none; 
+}
+
+#filter-menu {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-filter {
+  display: flex;
+  text-decoration: none;
+  color: var(--black);
+  border: 0.5px solid var(--black);
+  padding: 4px;
+  height: 48px;
+  width: 144px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: var(--h4);
+  font-family: var(--serif);
+  gap: 0.5rem;
+}
+
+
+
+ .btn-filter + .filter-section {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  background: white;
+  transition: left 0s 0.5s, opacity 0.5s;
+}
+
+.btn-filter:focus + .filter-section,
+.btn-filter + .filter-section:focus-within {
+  left: 0;
+  opacity: 1;
+  transition: left 0s, opacity 0.5s;
+}
+
+.btn-filter + .filter-section button {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  top: -50vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: top 0.5s;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.btn-filter:focus + .filter-section button,
+.btn-filter + .filter-section:focus-within button {
+  top: 0;
+} 
+
+/* #filter-menu + nav li {
+  width: 50%;
+  margin: 0 0.5em 0.5em;
+} */
+
+
+.filter-section{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 400px 0;
+}
+
+.filter-section h3{
+  border-bottom: 0.5px soli var(--grey);
+}
+
+.filter-category:first-child{
+  border-top: 0.5px solid var(--grey);
+}
+
+.filter-category button{
+  height: 48px;
+  background: white;
+  border: none;
+  border-bottom: 0.5px solid var(--grey);
+  font-size: var(--h5);
+}

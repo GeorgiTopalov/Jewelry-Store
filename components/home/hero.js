@@ -9,7 +9,7 @@ const Hero = () => {
         <h1>Luxury Within Reach</h1>
         <div className={styles['hero-content-bottom']}>
           <h3>Experience the Brilliance of Lab-Grown Diamonds</h3>
-          <Link href="/contactus" className="btn btn-primary">
+          <Link href="/shop" className="btn btn-primary">
             Shop Now
           </Link>
         </div>

@@ -1,0 +1,50 @@
+#items-area {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2%;
+  padding: 2%;
+}
+
+.product-card {
+  background-image: url(../../public/Ring-sample1.jpg);
+  background-position: center;
+  background-size: cover;
+  flex-basis: 47%;
+  margin-top: 2%;
+  height: 176px;
+  width: 176px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn-shop {
+    display: flex;
+    width: 144px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: none;
+}
+
+.product p {
+    margin:0;
+}
+
+.price {
+ font-weight: 500;
+}
+@media (min-width: 800px) {
+  .product-card .btn-shop {
+    display: none;
+  }
+
+  .product-card:hover .btn-shop {
+    display: flex;
+    width: 144px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+}

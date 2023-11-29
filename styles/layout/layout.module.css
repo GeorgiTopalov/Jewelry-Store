@@ -6,6 +6,8 @@
   grid-row-gap: 0px;
 }
 
+
+
 .promotion-bar {
   grid-area: 1 / 1 / 2 / 3;
   background-color: var(--black);

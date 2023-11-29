@@ -60,13 +60,13 @@ img {
   color: white;
   background-color: black;
   cursor: pointer;
+  height: 48px;
 }
 
 .btn-primary {
   text-decoration: none;
   display: flex;
-  height: 48px;
-  width: 300px;
+  width: 296px;
   font-size: 2rem;
   justify-content: center;
   align-items: center;
@@ -74,11 +74,12 @@ img {
 
 .btn-secondary {
   margin: 1rem;
-  height: 48px;
-  width: 150px;
+  width: 144px;
   font-size: 1rem;
   border-radius: 4px;
 }
+
+
 
 .btn:hover {
   background-color: transparent;
