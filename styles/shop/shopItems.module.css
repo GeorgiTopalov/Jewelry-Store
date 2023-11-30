@@ -53,6 +53,10 @@
     width: 352px;
   }
 
+  .product-card:hover {
+    filter: brightness(105%);
+  }
+
   .product-card .btn-shop {
     display: none;
   }

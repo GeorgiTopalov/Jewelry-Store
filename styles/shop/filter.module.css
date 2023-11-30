@@ -108,10 +108,21 @@
   }
 
   #filter-menu {
-    grid-area: 1 / 1 / 9 / 2 ;
+    grid-area: 1 / 1 / 4 / 2;
     border: 0.5px solid var(--grey);
-    border-left: none;
+    margin: 1rem;
+    box-shadow: 0px 2px 4px 1.5px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
+
+  .filter-category {
+    border-bottom: 0.5px solid var(--grey);
+    margin: 2rem;
+  }
+
+  .filter-category:first-child {
+    border-top: none;
+  }
+
   #filter-menu .filter-section {
     left: 0;
     position: static;
@@ -130,5 +141,14 @@
     border: none;
     top: 0;
     min-width: 0vw;
+    cursor: pointer;
+  }
+
+  .sub-category label {
+    cursor: pointer;
+  }
+
+  .sub-category label:hover {
+    filter:brightness(10%);
   }
 }
