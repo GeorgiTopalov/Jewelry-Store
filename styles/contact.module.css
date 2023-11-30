@@ -46,8 +46,12 @@
         max-width: 400px;
     }
     
-    #contact-form .contact-input {
-        width: 35vw;
+    #contact-form {
+        width: 25vw;
+    }
+
+    #contact-form div{
+        width: 100%;
     }
 
 }
