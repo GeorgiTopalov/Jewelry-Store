@@ -9,6 +9,7 @@ const FilterSection = () => {
     Category: ["Stack ring", "Wedding Band", "Engagement Ring"],
     Price: ["150$-300$", "300$-500$", "500$-800$", "800$-1200$", "1200$-2000$"],
     "Gemstone Shape": ["Oval", "Radiant", "Emerald", "Marquise", "Trillion"],
+    "Gemstone Color": ["Blue", "Red", "Green", "Transparent", "Yellow"]
   };
 
   const toggleCategory = (category) => {
