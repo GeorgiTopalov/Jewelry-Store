@@ -14,7 +14,7 @@ const HomePage = () => {
             <h6>in 9k gold with a beautiful diamond 3.2mm</h6>
             <form id="product-form">
               <div className="form-section">
-                <label for="quantity">Quantity</label>
+                <label htmlFor="quantity">Quantity</label>
                 <select form="product-form">
                   <option>1</option>
                   <option>2</option>
@@ -24,7 +24,7 @@ const HomePage = () => {
                 </select>
               </div>
               <div className="ring-size form-section">
-                <label for="ringsize">Ring Size</label>
+                <label htmlFor="ringsize">Ring Size</label>
                 <select form="product-form">
                   <option>4</option>
                   <option>5</option>

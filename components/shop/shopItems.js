@@ -5,47 +5,61 @@ import Link from "next/link";
 const ShopItems = () => {
   return (
     <div id={styles["items-area"]}>
-      <div className={styles['product']}>
-      <Link href="/productdetail">
-      <div className={styles['product-card']}>
-        <Link href="/productdetails" className={`btn ${styles['btn-shop']}`}>
-          <h3>Add to Cart</h3>
+      <div className={styles["product"]}>
+        <Link href="/productdetail">
+          <div className={styles["product-card"]}>
+            <button
+              href="/productdetails"
+              className={`btn ${styles["btn-shop"]}`}
+            >
+              <h3>Add to Cart</h3>
+            </button>
+          </div>
         </Link>
+        <p>This is the rings name</p>
+        <p className={styles["price"]}>900$</p>
       </div>
-      </Link>
-      <p>This is the rings name</p>
-      <p className={styles['price']}>900$</p>
-      </div>
-      <div className={styles['product']}>
-      <Link href="/productdetail">
-      <div className={styles['product-card']}>
-        <Link href="/productdetails" className={`btn ${styles['btn-shop']}`}>
-          <h3>Add to Cart</h3>
+      <div className={styles["product"]}>
+        <Link href="/productdetail">
+          <div className={styles["product-card"]}>
+            <button
+              href="/productdetails"
+              className={`btn ${styles["btn-shop"]}`}
+            >
+              <h3>Add to Cart</h3>
+            </button>
+          </div>
         </Link>
+        <p>This is the rings name</p>
+        <p className={styles["price"]}>900$</p>
       </div>
-      </Link>
-      <p>This is the rings name</p>
-      <p className={styles['price']}>900$</p>
-      </div><div className={styles['product']}>
-      <Link href="/productdetail">
-      <div className={styles['product-card']}>
-        <Link href="/productdetails" className={`btn ${styles['btn-shop']}`}>
-          <h3>Add to Cart</h3>
+      <div className={styles["product"]}>
+        <Link href="/productdetail">
+          <div className={styles["product-card"]}>
+            <button
+              href="/productdetails"
+              className={`btn ${styles["btn-shop"]}`}
+            >
+              <h3>Add to Cart</h3>
+            </button>
+          </div>
         </Link>
+        <p>This is the rings name</p>
+        <p className={styles["price"]}>900$</p>
       </div>
-      </Link>
-      <p>This is the rings name</p>
-      <p className={styles['price']}>900$</p>
-      </div><div className={styles['product']}>
-      <Link href="/productdetail">
-      <div className={styles['product-card']}>
-        <Link href="/productdetails" className={`btn ${styles['btn-shop']}`}>
-          <h3>Add to Cart</h3>
+      <div className={styles["product"]}>
+        <Link href="/productdetail">
+          <div className={styles["product-card"]}>
+            <button
+              href="/productdetails"
+              className={`btn ${styles["btn-shop"]}`}
+            >
+              <h3>Add to Cart</h3>
+            </button>
+          </div>
         </Link>
-      </div>
-      </Link>
-      <p>This is the rings name</p>
-      <p className={styles['price']}>900$</p>
+        <p>This is the rings name</p>
+        <p className={styles["price"]}>900$</p>
       </div>
     </div>
   );
