@@ -29,9 +29,6 @@
   transition: 300ms;
 }
 
-/* :where(.rings, .earrings, .bracelets):hover {
-    background: crimson; 
-} */
 
 :where(.rings):hover {
   background-image: url('../../public/wearing-ring-sample1.jpg') 
