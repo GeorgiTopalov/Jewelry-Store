@@ -45,6 +45,9 @@
 }
 @media (min-width: 800px) {
 
+  #items-area {
+    grid-area: 1 / 2 / 4 / 9
+  }
   .product-card {
     height: 352px;
     width: 352px;

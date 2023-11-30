@@ -44,10 +44,10 @@ const FilterSection = () => {
               {category}
             </button>
             {isCategoryOpen[category] && (
-              <div className={styles.options}>
+              <div className={styles['sub-category']}>
                 {options.map((option) => (
-                  <label key={option} className={styles['option']}>
-                    <input type="checkbox" value={option} />
+                  <label key={option}>
+                    <input className={styles['filter-checkbox']} type="checkbox" value={option} />
                     {option}
                   </label>
                 ))}
