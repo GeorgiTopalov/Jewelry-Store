@@ -9,7 +9,7 @@ const ShopItems = () => {
         <Link href="/productdetail">
           <div className={styles["product-card"]}>
             <button
-              href="/productdetails"
+              href="/productdetail"
               className={`btn ${styles["btn-shop"]}`}
             >
               <h3>Add to Cart</h3>
@@ -23,7 +23,7 @@ const ShopItems = () => {
         <Link href="/productdetail">
           <div className={styles["product-card"]}>
             <button
-              href="/productdetails"
+              href="/productdetail"
               className={`btn ${styles["btn-shop"]}`}
             >
               <h3>Add to Cart</h3>
@@ -37,7 +37,7 @@ const ShopItems = () => {
         <Link href="/productdetail">
           <div className={styles["product-card"]}>
             <button
-              href="/productdetails"
+              href="/productdetail"
               className={`btn ${styles["btn-shop"]}`}
             >
               <h3>Add to Cart</h3>
@@ -51,7 +51,7 @@ const ShopItems = () => {
         <Link href="/productdetail">
           <div className={styles["product-card"]}>
             <button
-              href="/productdetails"
+              href="/productdetail"
               className={`btn ${styles["btn-shop"]}`}
             >
               <h3>Add to Cart</h3>
