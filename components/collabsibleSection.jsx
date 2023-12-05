@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./../styles/layout/collapsibleSection.module.css";
 
+let closeOpenSection = null; // Static variable to store the setIsOpen function of the open section
+
 const CollapsibleSection = ({ title, links, additionalClass }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,9 +20,22 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
     return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
+  useEffect(() => {
+    // Update the static variable when this section is opened
+    if (isOpen) {
+      if (closeOpenSection) {
+        closeOpenSection(false);
+      }
+      closeOpenSection = setIsOpen;
+    }
+  }, [isOpen]);
+
   const toggleOpen = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 800) {
+      if (closeOpenSection && closeOpenSection !== setIsOpen) {
+        closeOpenSection(false); // Close the currently open section
+      }
       setIsOpen(!isOpen);
     }
   };
@@ -30,11 +45,13 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
   }`;
 
   const toggleIconClass = `${styles['toggle-icon']} ${isOpen ? styles['open'] : ''}`;
+
   return (
     <div className={className}>
       <h3 onClick={toggleOpen}>
         {title}
-        <span className={toggleIconClass}></span></h3>
+        <span className={toggleIconClass}></span>
+      </h3>
       <ul
         style={{
           maxHeight: isOpen ? "500px" : "0",
@@ -53,3 +70,5 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
 };
 
 export default CollapsibleSection;
+
+
