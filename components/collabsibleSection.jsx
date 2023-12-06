@@ -44,7 +44,9 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
     additionalClass || ""
   }`;
 
-  const toggleIconClass = `${styles['toggle-icon']} ${isOpen ? styles['open'] : ''}`;
+  const toggleIconClass = `${styles["toggle-icon"]} ${
+    isOpen ? styles["open"] : ""
+  }`;
 
   return (
     <div className={className}>
@@ -70,5 +72,3 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
 };
 
 export default CollapsibleSection;
-
-

@@ -26,16 +26,16 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <header id={styles['top']}>
-        <div className={styles['promotion-bar']}>
+      <header id={styles["top"]}>
+        <div className={styles["promotion-bar"]}>
           <Link href="/">Check our Christmas promotions - Up To 40% OFF!</Link>
         </div>
-        <h2 className={styles['brand-name']}>
+        <h2 className={styles["brand-name"]}>
           <Link href="/">ARAIYA</Link>
         </h2>
-        <Link href="#" id={styles['mainMenuOpen']}>
+        <Link href="#" id={styles["mainMenuOpen"]}>
           <svg
-            className={styles['hamburger']}
+            className={styles["hamburger"]}
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -50,32 +50,32 @@ const Layout = ({ children }) => {
         <nav className={styles["nav"]}>
           <ul>
             <li>
-              <Link href="/engagement" className={styles['nav-item']}>
+              <Link href="/engagement" className={styles["nav-item"]}>
                 Rings
               </Link>
             </li>
             <li>
-              <Link href="/wedding" className={styles['nav-item']}>
+              <Link href="/wedding" className={styles["nav-item"]}>
                 Earrings
               </Link>
             </li>
             <li>
-              <Link href="gifts" className={styles['nav-item']}>
+              <Link href="gifts" className={styles["nav-item"]}>
                 Necklaces
               </Link>
             </li>
             <li>
-              <Link href="gifts" className={styles['nav-item']}>
+              <Link href="gifts" className={styles["nav-item"]}>
                 Bracelets
               </Link>
             </li>
             <li>
-              <Link href="gifts" className={styles['nav-item']}>
+              <Link href="gifts" className={styles["nav-item"]}>
                 Charms
               </Link>
             </li>
             <li>
-              <Link href="collections" className={styles['nav-item']}>
+              <Link href="collections" className={styles["nav-item"]}>
                 Collections
               </Link>
             </li>
@@ -83,8 +83,8 @@ const Layout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer id={styles['footer']}>
-        <div className={styles['newsletter']}>
+      <footer id={styles["footer"]}>
+        <div className={styles["newsletter"]}>
           <h3>Sign up for our Newsletter!</h3>
           <p>
             Be the first to hear about any of our new arrivals, promotions and
@@ -101,19 +101,19 @@ const Layout = ({ children }) => {
         <CollapsibleSection
           title="Customer Care"
           links={customerCareLinks}
-          additionalClass={styles['collapsible-section']}
+          additionalClass={styles["collapsible-section"]}
         />
         <CollapsibleSection
           title="About Us"
           links={aboutUsLinks}
-          additionalClass={styles['collapsible-section']}
+          additionalClass={styles["collapsible-section"]}
         />
         <CollapsibleSection
           title="Legal Area"
           links={legalAreaLinks}
-          additionalClass={styles['collapsible-section']}
+          additionalClass={styles["collapsible-section"]}
         />
-        <div className={styles['social']}>
+        <div className={styles["social"]}>
           <Link href="http://www.facebook.com" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@ const Layout = ({ children }) => {
             </svg>
           </Link>
         </div>
-        <div className={styles['rights']}>
+        <div className={styles["rights"]}>
           &copy; All Rights Reserved. 2024 ARAIYA
         </div>
       </footer>

@@ -124,6 +124,7 @@
   flex-flow: column wrap;
   color: var(--black);
   margin-top: 2rem;
+  border-top: 0.5px solid var(--light-grey);
 }
 
 #footer a {
