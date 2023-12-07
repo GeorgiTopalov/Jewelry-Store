@@ -8,7 +8,10 @@ const LoginForm = () => {
       <section className={styles["login-form"]}>
         <h2 className={styles["form-title"]}>Sign In</h2>
         <p>
-          New user? <Link href="/register">Create an account</Link>
+          New user?{" "}
+          <Link className={styles["register-link"]} Link href="/register">
+            Create an account
+          </Link>
         </p>
         <form name="login" className={styles["form-content"]}>
           <label htmlFor="email" hidden>
