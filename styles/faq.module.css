@@ -1,0 +1,23 @@
+.faq-card {
+    padding: 48px 64px;
+  box-shadow: 0px 2px 4px 1.5px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.question {
+    font-weight: 500;
+}
+
+.cont-redirect {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-redirect a {
+    text-decoration: none;
+}
