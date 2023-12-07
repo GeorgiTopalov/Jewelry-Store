@@ -1,0 +1,140 @@
+.register-layout{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.register-layout a {
+    text-decoration: none;
+}
+
+.login-link {
+    color: blue;
+}
+
+
+.register-form {
+    padding: 48px 64px;
+    box-shadow: 0px 2px 4px 1.5px rgba(0, 0, 0, 0.15),
+      0px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.register-form p {
+    margin-top:0;
+}
+
+.form-content {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem 0 1rem 0;
+  }
+
+  .form-title {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: var(--h3);
+    margin: 0;
+  }
+
+  .form-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+.form-btn {
+    border-radius: 32px;
+    height: 48px;
+    width: 96px;
+    font-size: var(--h6);
+    font-family: var(--sans);
+  }
+
+  .striped {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .striped-line {
+    flex: auto;
+    flex-basis: auto;
+    border: none;
+    outline: none;
+    height: 1px;
+    background: var(--grey);
+  }
+  
+  .striped-text {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    color: var(--primary-color);
+    margin: 0 1rem;
+  }
+  
+  .alt-login {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+
+  .method-control {
+    height: 48px;
+  }
+  
+  .method-action {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--light-grey);
+    border-radius: 32px;
+    color: var(--black);
+  }
+  
+  .method-action:hover {
+      filter: brightness(110%);
+  }
+  
+  .google-icon {
+    fill: #f44336;
+  }
+  .fb-icon {
+    fill: #1a73e8;
+  }
+  .apple-icon {
+      fill: var(--black);
+  }
+
+  @media (min-width: 800px) {
+    .register-layout {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 16rem;
+    }
+  
+    .register-img {
+      background-image: url(../../public/Ring-sample1.jpg);
+      background-position: center;
+      background-size: cover;
+      display: block;
+      width: 640px;
+      height: 640px;
+    }
+  }
