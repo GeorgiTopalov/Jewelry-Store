@@ -36,10 +36,10 @@ const OurStory = () => {
             commitment to customer satisfaction.
           </p>
         </div>
-        <div className={styles['vision-img']}></div>
+        <div className={styles["vision-img"]}></div>
       </div>
-      <div className={`${styles['card']} ${styles['story']}`}>
-        <div className={styles['story-txt']}>
+      <div className={`${styles["card"]} ${styles["story"]}`}>
+        <div className={styles["story-txt"]}>
           <h2>Where it all began</h2>
           <h3>The Genesis of a Dream</h3>
           <p>
@@ -80,7 +80,7 @@ const OurStory = () => {
             flight in the world of fine jewelry.
           </p>
         </div>
-        <Link href="/shop" className={`${styles['btn-cta']} btn`}>
+        <Link href="/shop" className={`${styles["btn-cta"]} btn`}>
           Explore Our Shop
         </Link>
       </div>
