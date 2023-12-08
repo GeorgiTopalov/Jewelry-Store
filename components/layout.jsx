@@ -74,13 +74,57 @@ const Layout = ({ children }) => {
                 Charms
               </Link>
             </li>
-            <li>
-              <Link href="collections" className={styles["nav-item"]}>
-                Collections
+            <li className={styles["nav-account"]}>
+              <Link href="account" className={styles["nav-item"]}>
+                Account
               </Link>
             </li>
           </ul>
         </nav>
+        <div className={styles["acc-icons"]}>
+          <Link href="account" className={styles["acc-icon"]}>
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="512.000000pt"
+              height="512.000000pt"
+              viewBox="0 0 512.000000 512.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+              >
+                <path
+                  d="M2347 4844 c-481 -87 -867 -476 -952 -958 -31 -179 -15 -410 40 -573
+104 -308 326 -562 613 -700 l76 -36 -86 -23 c-902 -239 -1577 -1118 -1615
+-2102 -5 -138 -4 -154 12 -172 18 -20 32 -20 2125 -20 2093 0 2107 0 2125 20
+16 18 17 34 12 172 -28 735 -417 1435 -1017 1831 -181 120 -397 217 -598 271
+l-87 23 69 32 c110 50 234 138 331 236 152 151 255 330 312 542 25 90 27 113
+27 293 0 180 -2 203 -27 293 -123 457 -485 792 -941 872 -109 19 -313 18 -419
+-1z m422 -131 c527 -105 890 -594 840 -1134 -34 -368 -268 -700 -603 -854
+-519 -240 -1134 -27 -1386 480 -246 493 -81 1080 385 1372 220 139 501 189
+764 136z m65 -2239 c805 -114 1476 -761 1679 -1619 31 -129 57 -319 57 -411
+l0 -64 -2010 0 -2010 0 0 64 c0 162 51 428 122 636 48 141 157 365 235 485
+354 541 910 880 1513 925 127 9 280 3 414 -16z"
+                />
+              </g>
+            </svg>
+          </Link>
+          <Link href="cart" className={styles["cart-icon"]}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 18 20"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="0.5"
+                d="M12 9V4a3 3 0 0 0-6 0v5m9.92 10H2.08a1 1 0 0 1-1-1.077L2 6h14l.917 11.923A1 1 0 0 1 15.92 19Z"
+              />
+            </svg>
+          </Link>
+        </div>
       </header>
       <main>{children}</main>
       <footer id={styles["footer"]}>
