@@ -5,7 +5,7 @@ import styles from "./../../styles/blog.module.css";
 const BlogLayout = () => {
   return (
     <div className={styles["blog-layout"]}>
-      <section className={styles["blog-posts"]}>
+      <section className={`${styles["blog-posts"]} ${styles["blog-card"]}`}>
         <article className={styles["blog-post"]}>
           <header>
             <h3>
@@ -224,28 +224,39 @@ const BlogLayout = () => {
         </article>
       </section>
       <aside className={styles["blog-sidebar"]}>
-        <div className={styles["mailing-list"]}>
-          <h4>Join our mailing list</h4>
+        <div className={`${styles["mailing-list"]} ${styles["blog-card"]}`}>
+          <h3>Join our mailing list</h3>
           <p>Get notified for any new articles the moment they come out!</p>
-          <button className="btn btn-primary">Click here to subscribe</button>
+          <button className="btn btn-secondary">Click here to subscribe</button>
         </div>
-        <div className={styles["search-bar"]}>
+        <div className={`${styles["search-bar"]} ${styles["blog-card"]}`}>
 				<form  className={styles["search-form"]}>
-					<label htmlFor="sidebar-search" hidden>Search the blog</label>
+					<label htmlFor="sidebar-search"><h3>Search the blog</h3></label>
 					<input type="text" id="sidebar-search" placeholder="Search..."></input>
 				</form>
 			</div>
-        <div className={styles["recent-posts"]}>
-          <h4>Recent Posts</h4>
+        <div className={`${styles["recent-posts"]} ${styles["blog-card"]}`}>
+          <h3>Recent Posts</h3>
           <ul>
             <li>
+                <h4><Link href="blog" className={styles["recent-posts-title"]}>Discovering the Charm of 9k Gold Jewelry: Your Guide to
+                Affordable</Link></h4>
                 <div className={styles["recent-posts-img"]}></div>
-                <h4><Link href="blog" className={styles["recent-posts-title"]}>Title</Link></h4>
+            </li>
+            <li>
+                <h4><Link href="blog" className={styles["recent-posts-title"]}>Discovering the Charm of 9k Gold Jewelry: Your Guide to
+                Affordable</Link></h4>
+                <div className={styles["recent-posts-img"]}></div>
+            </li>
+            <li>
+                <h4><Link href="blog" className={styles["recent-posts-title"]}>Discovering the Charm of 9k Gold Jewelry: Your Guide to
+                Affordable</Link></h4>
+                <div className={styles["recent-posts-img"]}></div>
             </li>
           </ul>
         </div>
-        <div className={styles["categories"]}>
-          <h4>Categories</h4>
+        <div className={`${styles["blog-categories"]} ${styles["blog-card"]}`}>
+          <h3>Categories</h3>
           <ul>
             <li>
                 <Link href="blog">Wedding</Link>

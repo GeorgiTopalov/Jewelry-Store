@@ -149,6 +149,6 @@
   }
 
   .sub-category label:hover {
-    filter:brightness(10%);
+    font-weight: 400;
   }
 }
