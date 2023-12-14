@@ -1,5 +1,3 @@
-
-
 :root {
   /* Font size */
   --base-size: 1rem;
@@ -17,8 +15,8 @@
 
   /*Colors*/
   /* --primary-color: #f84c74; */
-  --primary-color: #f84c74aa;
-  --primary-color-light: #f84c74aa;
+  --primary-color: rgba(248, 76, 116, 0.667);
+  --primary-color-light: #f85d8187;
   --secondary-color: #ff8242;
   --black: #1f1f1f;
   --white: #fff;
@@ -87,8 +85,6 @@ img {
   border-radius: 4px;
 }
 
-
-
 .btn:hover {
   background-color: transparent;
   color: black;
@@ -138,7 +134,7 @@ input:focus {
 }
 
 .input-col {
-  display:flex;
+  display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
 }
@@ -151,5 +147,4 @@ input:focus {
 }
 
 @media (min-width: 800px) {
- 
 }
