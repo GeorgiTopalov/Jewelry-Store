@@ -1,5 +1,16 @@
+.account-layout{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+}
+
 .account-menu {
     list-style-type: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding:0;
 }
 
 .dropdown-button {
@@ -24,4 +35,45 @@
 }
 .account-menu{
     border-bottom: 1px solid var(--grey);
+}
+
+
+
+@media (min-width: 800px){
+    .account-layout {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0px 2px 4px 1.5px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+        gap: 0;
+    }
+
+    .dropdown-button{
+        display: none;
+    }
+
+    .account-menu {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .account-menu a {
+        text-decoration: none;
+        color: var(--black);
+        font-size: var(--h5);
+    }
+
+    .account-menu li h4:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px var(--primary-color);
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+    
+      .account-menu li h4:hover:after {
+        transform: scaleX(1);
+      }
 }

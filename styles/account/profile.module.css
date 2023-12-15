@@ -1,0 +1,39 @@
+.profile-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-content h4 {
+  display: none;
+}
+
+.profile-form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  max-width: 320px;
+}
+
+.profile-form div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 320px;
+}
+
+.birthdate input {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 800px) {
+  .profile-content h4 {
+    display: block;
+    font-size: var(--h5);
+    font-weight: 400;
+  }
+}

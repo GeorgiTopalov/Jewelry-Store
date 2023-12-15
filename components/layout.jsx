@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           <Link href="/">Check our Christmas promotions - Up To 40% OFF!</Link>
         </div>
         <h2 className={styles["brand-name"]}>
-          <Link href="/">ARAIYA</Link>
+          <Link href="/">Amirah</Link>
         </h2>
         <Link href="#" id={styles["mainMenuOpen"]}>
           <svg
@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
               </Link>
             </li>
             <li className={styles["nav-account"]}>
-              <Link href="account" className={styles["nav-item"]}>
+              <Link href="account/profile" className={styles["nav-item"]}>
                 Account
               </Link>
             </li>

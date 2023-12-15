@@ -1,0 +1,41 @@
+.addresses-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.addresses-content h4 {
+   display:none;
+}
+
+.addresses-form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    max-width: 320px;
+}
+
+
+
+.addresses-form div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 320px;
+}
+
+.addresses-form button {
+    margin: 0.5rem auto;
+}
+
+@media (min-width: 800px) {
+    .addresses-content h4 {
+      display: block;
+      font-size: var(--h5);
+      font-weight: 400;
+    }
+  }
+
