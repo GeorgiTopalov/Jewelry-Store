@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./../styles/layout/collapsibleSection.module.css";
 
-let closeOpenSection = null; // Static variable to store the setIsOpen function of the open section
-
 const CollapsibleSection = ({ title, links, additionalClass }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const closeOpenSectionRef = useRef(null); // Ref to store the setIsOpen function
 
   useEffect(() => {
     const checkWidth = () => {
@@ -21,20 +20,19 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
   }, []);
 
   useEffect(() => {
-    // Update the static variable when this section is opened
     if (isOpen) {
-      if (closeOpenSection) {
-        closeOpenSection(false);
+      if (closeOpenSectionRef.current && closeOpenSectionRef.current !== setIsOpen) {
+        closeOpenSectionRef.current(false);
       }
-      closeOpenSection = setIsOpen;
+      closeOpenSectionRef.current = setIsOpen;
     }
   }, [isOpen]);
 
   const toggleOpen = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 800) {
-      if (closeOpenSection && closeOpenSection !== setIsOpen) {
-        closeOpenSection(false); // Close the currently open section
+      if (closeOpenSectionRef.current && closeOpenSectionRef.current !== setIsOpen) {
+        closeOpenSectionRef.current(false); // Close the currently open section
       }
       setIsOpen(!isOpen);
     }
@@ -72,3 +70,4 @@ const CollapsibleSection = ({ title, links, additionalClass }) => {
 };
 
 export default CollapsibleSection;
+
