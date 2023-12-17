@@ -61,6 +61,8 @@ const AccountLayout = ({ children }) => {
         return "My Orders";
       case "addresses":
         return "My Addresses";
+      case "wishlist":
+        return "My Wishlist";
       default:
         return "Profile Info";
     }
@@ -134,6 +136,11 @@ const AccountLayout = ({ children }) => {
           <Link href="addresses">
             <li>
               <h4>Addresses</h4>
+            </li>
+          </Link>
+          <Link href="addresses">
+            <li>
+              <h4>Wishlist</h4>
             </li>
           </Link>
       </ul>

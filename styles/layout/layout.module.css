@@ -81,6 +81,19 @@
   stroke: var(--black);
 }
 
+.acc-icons {
+  gap: 4px;
+  flex-flow: row nowrap;
+}
+
+.wish-icon {
+  fill: var(--black);
+}
+
+.acc-icon svg{
+  display: none;
+}
+
 #mainMenuOpen + nav {
   position: fixed;
   top: 0;
@@ -347,6 +360,10 @@
     grid-area: 3 / 1 / 4 / 5;
     justify-content: flex-start;
     padding-left: 1rem;
+  }
+
+  .acc-icon svg {
+    display: block;
   }
 
   .acc-icons svg {
