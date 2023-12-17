@@ -41,6 +41,10 @@
   font-weight: 500;
 }
 
+.wish-icon svg {
+  display: none;
+}
+
 @media (min-width: 550px) {
   .product-card {
     height: 264px;
@@ -53,6 +57,9 @@
     grid-area: 1 / 2 / 4 / 9
   }
   .product-card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
     height: 352px;
     width: 352px;
   }
@@ -65,7 +72,25 @@
     display: none;
   }
 
-  .product-card:hover .btn-shop {
+  .wish-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 24px;
+    padding-right: 24px;
+  }
+
+  .product-card:hover .wish-icon svg {
+    display: block;
+  }
+
+  .wish-icon:hover {
+    fill: var(--primary-color);
+  }
+
+  .product-card:hover .btn-shop
+   {
     display: flex;
     width: 352px;
     justify-content: center;
