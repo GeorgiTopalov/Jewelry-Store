@@ -23,6 +23,7 @@ const FilterSection = () => {
   const categories = {
     Category: ["Stack ring", "Wedding Band", "Engagement Ring", "Sets"],
     Price: ["150$-300$", "300$-500$", "500$-800$", "800$-1200$", "1200$-2000$"],
+    Metal: ["Yellow Gold", "White Gold", "Rose Gold", "Platinum"],
     "Gemstone Shape": [
       "Oval",
       "Pear",
@@ -33,6 +34,53 @@ const FilterSection = () => {
       "Princess",
     ],
     "Gemstone Color": ["Blue", "Red", "Green", "Transparent", "Yellow"],
+  };
+
+  const metalIcons = {
+    "Yellow Gold": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient id="yellowGoldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style={{ stopColor: '#FFF8DC', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#FFD700', stopOpacity: 1 }} />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#yellowGoldGradient)" />
+      </svg>
+    ),
+    "White Gold": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient id="whiteGoldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style={{ stopColor: '#E5E4E2', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#BCC0C1', stopOpacity: 1 }} />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#whiteGoldGradient)" />
+      </svg>
+    ),
+    "Rose Gold": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient id="roseGoldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style={{ stopColor: '#E8CCB1', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#DDB6A1', stopOpacity: 1 }} />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#roseGoldGradient)" />
+      </svg>
+    ),
+    "Platinum": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient id="platinumGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style={{ stopColor: '#E5E4E2', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: '#A5A5A5', stopOpacity: 1 }} />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#platinumGradient)" />
+      </svg>
+    ),
   };
 
   const gemstoneShapeIcons = {
@@ -87,11 +135,25 @@ const FilterSection = () => {
       </svg>
     ),
     Baguette: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="M95 26.75H5l-.75.75v45l.75.75h90l.75-.75v-45zm-9.78 9.47H14.78l-8-8h86.41zm-.44 1.5v24.56H15.22V37.72zm-71.06-.44v25.44l-8 8V29.31zm1.06 26.5h70.44l8 8H6.81zm71.5-1.06V37.28l8-8v41.41z"/></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 125"
+        x="0px"
+        y="0px"
+      >
+        <path d="M95 26.75H5l-.75.75v45l.75.75h90l.75-.75v-45zm-9.78 9.47H14.78l-8-8h86.41zm-.44 1.5v24.56H15.22V37.72zm-71.06-.44v25.44l-8 8V29.31zm1.06 26.5h70.44l8 8H6.81zm71.5-1.06V37.28l8-8v41.41z" />
+      </svg>
     ),
     Princess: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="M85.53 13.72H14.47l-.75.75v71.06l.75.75h71.06l.75-.75V14.47zm-.75 50.92H78V35.36h6.79zM15.22 35.36H22v29.28h-6.78zm20.14-11.5l12.55 4.82-12.55 4.83zM27.88 50l-4.37 11.36V38.64zm-4-14.64h9.65l-4.85 12.55zm4.82 16.73l4.83 12.55h-9.67zm6.68 14.4l12.55 4.83-12.57 4.82zm-.17-1.68L29.49 50l5.7-14.81L50 29.49l14.81 5.7L70.51 50l-5.7 14.81L50 70.51zm29.45-31.3l-12.57-4.83 12.55-4.82zm0 33v9.65l-12.57-4.84zm6.68-14.4l4.82 12.55h-9.67zm.8-2.09l4.37-11.36v22.7zm-.8-2.09l-4.85-12.57h9.65zM50 27.88l-11.36-4.37h22.72zm-16.14 6H22.11l-6.37-18 18.12 7.46zm0 32.28v10.57l-18.12 7.46 6.37-18zm16.14 6l11.36 4.37H38.64zm16.14-6h11.75l6.37 18-18.12-7.43zm0-32.28V23.27l18.12-7.46-6.37 18zm0-12.22v-6.44h15.6zm-1.5.37H35.36v-6.81h29.28zm-30.78-.37l-15.6-6.42h15.6zm-13.34 12.2h-5.3v-15zm-5.3 32.28h5.3l-5.3 15zm18.64 12.22v6.42h-15.6zm1.5-.37h29.28v6.79H35.36zm30.78.37l15.6 6.42h-15.6zm13.34-12.22h5.3v15zm5.3-32.28h-5.3l5.3-15z"/></svg>
-    )
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 125"
+        x="0px"
+        y="0px"
+      >
+        <path d="M85.53 13.72H14.47l-.75.75v71.06l.75.75h71.06l.75-.75V14.47zm-.75 50.92H78V35.36h6.79zM15.22 35.36H22v29.28h-6.78zm20.14-11.5l12.55 4.82-12.55 4.83zM27.88 50l-4.37 11.36V38.64zm-4-14.64h9.65l-4.85 12.55zm4.82 16.73l4.83 12.55h-9.67zm6.68 14.4l12.55 4.83-12.57 4.82zm-.17-1.68L29.49 50l5.7-14.81L50 29.49l14.81 5.7L70.51 50l-5.7 14.81L50 70.51zm29.45-31.3l-12.57-4.83 12.55-4.82zm0 33v9.65l-12.57-4.84zm6.68-14.4l4.82 12.55h-9.67zm.8-2.09l4.37-11.36v22.7zm-.8-2.09l-4.85-12.57h9.65zM50 27.88l-11.36-4.37h22.72zm-16.14 6H22.11l-6.37-18 18.12 7.46zm0 32.28v10.57l-18.12 7.46 6.37-18zm16.14 6l11.36 4.37H38.64zm16.14-6h11.75l6.37 18-18.12-7.43zm0-32.28V23.27l18.12-7.46-6.37 18zm0-12.22v-6.44h15.6zm-1.5.37H35.36v-6.81h29.28zm-30.78-.37l-15.6-6.42h15.6zm-13.34 12.2h-5.3v-15zm-5.3 32.28h5.3l-5.3 15zm18.64 12.22v6.42h-15.6zm1.5-.37h29.28v6.79H35.36zm30.78.37l15.6 6.42h-15.6zm13.34-12.22h5.3v15zm5.3-32.28h-5.3l5.3-15z" />
+      </svg>
+    ),
   };
 
   const toggleCategory = (category) => {
@@ -130,6 +192,12 @@ const FilterSection = () => {
                     <label key={option}>
                       {category === "Gemstone Shape" &&
                         gemstoneShapeIcons[option]}
+                      <input
+                        className={styles["filter-checkbox"]}
+                        type="checkbox"
+                        value={option}
+                      />
+                      {category === "Metal" && metalIcons[option]}
                       <input
                         className={styles["filter-checkbox"]}
                         type="checkbox"

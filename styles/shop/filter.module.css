@@ -103,16 +103,22 @@
   font-size: var(--h5);
 }
 
-.filter-category:nth-child(3) .sub-category label {
+.filter-category:nth-child(4) .sub-category label,
+.filter-category:nth-child(3) .sub-category label{
   display: flex;
   flex-flow: row-reverse wrap;
   align-items: center;
   justify-content: space-between;
   width: 120px;
 }
-.filter-category:nth-child(3) .sub-category label svg{
+.filter-category:nth-child(4) .sub-category label svg{
   width: 48px;
   height: 48px;
+}
+
+.filter-category:nth-child(3) .sub-category label svg{
+  width: 24px;
+  height: 24px;
 }
 
 @media (min-width: 1200px) {
