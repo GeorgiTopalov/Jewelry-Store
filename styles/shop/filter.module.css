@@ -162,7 +162,7 @@
   }
 
   #filter-menu .sub-category label:hover {
-    filter: brightness(120%);
+    color: var(--primary-color);
   }
   
 }
