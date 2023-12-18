@@ -213,7 +213,6 @@ const ShopItems = () => {
         <p>This is the rings name</p>
         <p className={styles["price"]}>900$</p>
       </div>
-      
     </div>
   );
 };
