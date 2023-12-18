@@ -5,6 +5,7 @@ import Link from "next/link";
 const FilterSection = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState({});
   const [windowWidth, setWindowWidth] = useState(undefined);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -40,9 +41,22 @@ const FilterSection = () => {
     "Yellow Gold": (
       <svg width="50" height="50" viewBox="0 0 50 50">
         <defs>
-          <radialGradient id="yellowGoldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" style={{ stopColor: '#FFF8DC', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: '#FFD700', stopOpacity: 1 }} />
+          <radialGradient
+            id="yellowGoldGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#FFF8DC", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#FFD700", stopOpacity: 1 }}
+            />
           </radialGradient>
         </defs>
         <circle cx="25" cy="25" r="20" fill="url(#yellowGoldGradient)" />
@@ -51,9 +65,22 @@ const FilterSection = () => {
     "White Gold": (
       <svg width="50" height="50" viewBox="0 0 50 50">
         <defs>
-          <radialGradient id="whiteGoldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" style={{ stopColor: '#E5E4E2', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: '#BCC0C1', stopOpacity: 1 }} />
+          <radialGradient
+            id="whiteGoldGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#E5E4E2", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#BCC0C1", stopOpacity: 1 }}
+            />
           </radialGradient>
         </defs>
         <circle cx="25" cy="25" r="20" fill="url(#whiteGoldGradient)" />
@@ -62,20 +89,46 @@ const FilterSection = () => {
     "Rose Gold": (
       <svg width="50" height="50" viewBox="0 0 50 50">
         <defs>
-          <radialGradient id="roseGoldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" style={{ stopColor: '#E8CCB1', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: '#DDB6A1', stopOpacity: 1 }} />
+          <radialGradient
+            id="roseGoldGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#E8CCB1", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#DDB6A1", stopOpacity: 1 }}
+            />
           </radialGradient>
         </defs>
         <circle cx="25" cy="25" r="20" fill="url(#roseGoldGradient)" />
       </svg>
     ),
-    "Platinum": (
+    Platinum: (
       <svg width="50" height="50" viewBox="0 0 50 50">
         <defs>
-          <radialGradient id="platinumGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" style={{ stopColor: '#E5E4E2', stopOpacity: 1 }} />
-            <stop offset="100%" style={{ stopColor: '#A5A5A5', stopOpacity: 1 }} />
+          <radialGradient
+            id="platinumGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#E5E4E2", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#A5A5A5", stopOpacity: 1 }}
+            />
           </radialGradient>
         </defs>
         <circle cx="25" cy="25" r="20" fill="url(#platinumGradient)" />
@@ -156,11 +209,37 @@ const FilterSection = () => {
     ),
   };
 
+  const closedIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="16"
+      width="10"
+      viewBox="0 0 320 512"
+    >
+      <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+    </svg>
+  );
+
+  const openedIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="16"
+      width="10"
+      viewBox="0 0 320 512"
+    >
+      <path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z" />
+    </svg>
+  );
+
   const toggleCategory = (category) => {
     setIsCategoryOpen((prevState) => ({
       ...prevState,
       [category]: !prevState[category],
     }));
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -182,21 +261,16 @@ const FilterSection = () => {
             <div key={category} className={styles["filter-category"]}>
               <button
                 className={styles["category-title"]}
-                onClick={() => !isDesktop && toggleCategory(category)}
+                onClick={() => toggleCategory(category)}
               >
-                {category}
+                {isCategoryOpen[category] ? openedIcon : closedIcon}
+                <span>{category}</span>
               </button>
               {(isDesktop || isCategoryOpen[category]) && (
                 <div className={styles["sub-category"]}>
                   {options.map((option) => (
-                    <label key={option}>
-                      {category === "Gemstone Shape" &&
-                        gemstoneShapeIcons[option]}
-                      <input
-                        className={styles["filter-checkbox"]}
-                        type="checkbox"
-                        value={option}
-                      />
+                    <label key={option} className={styles["filter-option"]}>
+                      {category === "Gemstone Shape" && gemstoneShapeIcons[option]}
                       {category === "Metal" && metalIcons[option]}
                       <input
                         className={styles["filter-checkbox"]}
