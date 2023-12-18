@@ -86,9 +86,13 @@
   padding: 40px 0 400px 0;
 }
 
+.filter-categories {
+  margin-top: 2rem;
+}
 
 .filter-section h3 {
   border-bottom: 0.5px soli var(--grey);
+  font-size: var(--h3);
 }
 
 .filter-category:first-child {
@@ -96,11 +100,17 @@
 }
 
 .filter-category button {
-  height: 48px;
+  height: 96px;
   background: white;
   border: none;
   border-bottom: 0.5px solid var(--grey);
+  font-size: var(--h4);
+}
+
+.sub-category{
+  margin-top: 2rem;
   font-size: var(--h5);
+  gap: 1rem;
 }
 
 .filter-category:nth-child(4) .sub-category label,
@@ -109,7 +119,7 @@
   flex-flow: row-reverse wrap;
   align-items: center;
   justify-content: space-between;
-  width: 120px;
+  width: 144px;
 }
 .filter-category:nth-child(4) .sub-category label svg{
   width: 48px;
@@ -162,6 +172,11 @@
     top: 0;
     min-width: 0vw;
     cursor: pointer;
+  }
+  .sub-category{
+    margin-top: 0;
+    font-size: var(--h6);
+    gap: 0;
   }
 
   .sub-category label {

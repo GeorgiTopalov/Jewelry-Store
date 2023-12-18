@@ -256,7 +256,7 @@ const FilterSection = () => {
       </Link>
       <div className={styles["filter-section"]}>
         <h3>Filter by</h3>
-        <div>
+        <div className={styles["filter-categories"]}>
           {Object.entries(categories).map(([category, options]) => (
             <div key={category} className={styles["filter-category"]}>
               <button
