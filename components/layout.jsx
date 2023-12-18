@@ -61,16 +61,6 @@ const Layout = ({ children }) => {
             </li>
             <li>
               <Link href="gifts" className={styles["nav-item"]}>
-                Necklaces
-              </Link>
-            </li>
-            <li>
-              <Link href="gifts" className={styles["nav-item"]}>
-                Bracelets
-              </Link>
-            </li>
-            <li>
-              <Link href="gifts" className={styles["nav-item"]}>
                 Charms
               </Link>
             </li>
