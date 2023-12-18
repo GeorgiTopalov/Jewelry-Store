@@ -80,11 +80,12 @@
 
 .filter-section {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: space-between;
   align-items: center;
   padding: 40px 0 400px 0;
 }
+
 
 .filter-section h3 {
   border-bottom: 0.5px soli var(--grey);
@@ -117,6 +118,7 @@
   .filter-category {
     border-bottom: 0.5px solid var(--grey);
     margin: 2rem;
+    width: 100%;
   }
 
   .filter-category:first-child {
