@@ -14,7 +14,7 @@
   --serif: "Lato", sans-serif;
 
   /*Colors*/
-  /* --primary-color: #f84c74; */
+   --primary-color-solid: #f84c74;
   --primary-color: rgba(248, 76, 116, 0.667);
   --primary-color-light: #f85d8187;
   --secondary-color: #ff8242;

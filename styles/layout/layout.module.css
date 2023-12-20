@@ -105,7 +105,7 @@
   flex-direction: column;
   padding-top: 100px;
   opacity: 0;
-  background: var(--primary-color);
+  background: var(--primary-color-solid);
   transition: left 0s 0.5s, opacity 0.5s;
 }
 

@@ -12,6 +12,105 @@ const ProductComponent = () => {
     "/wearing-ring-sample1.jpg",
   ];
 
+  const metalIcons = {
+    "Yellow Gold": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient
+            id="yellowGoldGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#FFF8DC", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#FFD700", stopOpacity: 1 }}
+            />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#yellowGoldGradient)" />
+      </svg>
+    ),
+    "White Gold": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient
+            id="whiteGoldGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#E5E4E2", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#BCC0C1", stopOpacity: 1 }}
+            />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#whiteGoldGradient)" />
+      </svg>
+    ),
+    "Rose Gold": (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient
+            id="roseGoldGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#E8CCB1", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#DDB6A1", stopOpacity: 1 }}
+            />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#roseGoldGradient)" />
+      </svg>
+    ),
+    Platinum: (
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <defs>
+          <radialGradient
+            id="platinumGradient"
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop
+              offset="0%"
+              style={{ stopColor: "#E5E4E2", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#A5A5A5", stopOpacity: 1 }}
+            />
+          </radialGradient>
+        </defs>
+        <circle cx="25" cy="25" r="20" fill="url(#platinumGradient)" />
+      </svg>
+    ),
+  };
+
   const handlers = useSwipeable({
     onSwipedLeft: () =>
       setActiveImage((prevIndex) => (prevIndex + 1) % images.length),
@@ -51,8 +150,14 @@ const ProductComponent = () => {
           <h2>Super Nice Ring</h2>
           <h6>in 9k gold with a beautiful diamond 3.2mm</h6>
           <form id={styles["product-form"]}>
+            <div className={styles["metal"]}>
+                <label htmlFor="metal" id="metal"></label>
+                <select form="product-form">
+                    {metalIcons.map()}
+                </select>
+            </div>
             <div className={styles["ring-size form-section"]}>
-              <label htmlFor="ringsize">Ring Size</label>
+              <label htmlFor="ringsize" id="ringsize">Ring Size</label>
               <select form="product-form">
                 <option>4</option>
                 <option>5</option>
