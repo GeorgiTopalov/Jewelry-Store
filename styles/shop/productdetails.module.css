@@ -65,11 +65,22 @@
 
 .btn-shop {
   align-items: center;
-  height: 48px;
-  font-size: var(--h6);
+  height: 56px;
+  font-size: var(--h5);
 }
 
 .info-section {
     padding-bottom: 1rem;
     border-bottom: 0.5px solid var(--grey);
+}
+
+.delivery {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px;
+  margin: 0.5rem 0 0.5rem 0;
+  border-bottom: 0.5px solid var(--black);
 }
