@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./../../styles/blog.module.css";
+import PaginationComponent from "../ui/paginationComponent";
 
 const BlogLayout = () => {
+
   return (
     <div className={styles["blog-layout"]}>
       <section className={`${styles["blog-posts"]} ${styles["blog-card"]}`}>
