@@ -67,6 +67,7 @@ img {
   background-color: black;
   cursor: pointer;
   height: 48px;
+  font-family: var(--sans);
 }
 
 .btn-primary {

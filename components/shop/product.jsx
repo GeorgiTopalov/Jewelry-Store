@@ -153,7 +153,6 @@ const ProductComponent = () => {
             <div className={styles["metal"]}>
                 <label htmlFor="metal" id="metal"></label>
                 <select form="product-form">
-                    {metalIcons.map()}
                 </select>
             </div>
             <div className={styles["ring-size form-section"]}>
