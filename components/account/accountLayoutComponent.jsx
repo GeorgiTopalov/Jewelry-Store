@@ -81,42 +81,51 @@ const AccountLayout = ({ children }) => {
 
   return (
     <section className={styles["account-layout"]}>
-       {isMobileView ? (
-      <div className={styles["dropdown"]}>
-        <button onClick={toggleDropdown} className={styles["dropdown-button"]}>
-          {getCurrentPageName()}
-          {isDropdownOpen ? openIcon : closedIcon}
-        </button>
-        {isDropdownOpen && (
-          <ul className={styles["account-menu"]}>
-            <li
-              onClick={() => handleMenuItemClick("profile")}
-              className={styles["profile"]}
-            >
-              <h4>Profile</h4>
-            </li>
-            <li
-              onClick={() => handleMenuItemClick("settings")}
-              className={styles["account-settings"]}
-            >
-              <h4>Account Settings</h4>
-            </li>
-            <li
-              onClick={() => handleMenuItemClick("orders")}
-              className={styles["orders"]}
-            >
-              <h4>Orders</h4>
-            </li>
-            <li
-              onClick={() => handleMenuItemClick("addresses")}
-              className={styles["addresses"]}
-            >
-              <h4>Addresses</h4>
-            </li>
-          </ul>
-        )}
-      </div>
-       ) : (
+      {isMobileView ? (
+        <div className={styles["dropdown"]}>
+          <button
+            onClick={toggleDropdown}
+            className={styles["dropdown-button"]}
+          >
+            {getCurrentPageName()}
+            {isDropdownOpen ? openIcon : closedIcon}
+          </button>
+          {isDropdownOpen && (
+            <ul className={styles["account-menu"]}>
+              <li
+                onClick={() => handleMenuItemClick("profile")}
+                className={styles["profile"]}
+              >
+                <h4>Profile</h4>
+              </li>
+              <li
+                onClick={() => handleMenuItemClick("settings")}
+                className={styles["account-settings"]}
+              >
+                <h4>Account Settings</h4>
+              </li>
+              <li
+                onClick={() => handleMenuItemClick("orders")}
+                className={styles["orders"]}
+              >
+                <h4>Orders</h4>
+              </li>
+              <li
+                onClick={() => handleMenuItemClick("addresses")}
+                className={styles["addresses"]}
+              >
+                <h4>Addresses</h4>
+              </li>
+              <li
+                onClick={() => handleMenuItemClick("wishlist")}
+                className={styles["wishlist"]}
+              >
+                <h4>Wishlist</h4>
+              </li>
+            </ul>
+          )}
+        </div>
+      ) : (
         <ul className={styles["account-menu"]}>
           <Link href="profile">
             <li>
@@ -138,13 +147,13 @@ const AccountLayout = ({ children }) => {
               <h4>Addresses</h4>
             </li>
           </Link>
-          <Link href="addresses">
+          <Link href="wishlist">
             <li>
               <h4>Wishlist</h4>
             </li>
           </Link>
-      </ul>
-       )}
+        </ul>
+      )}
       <div>{children}</div>
     </section>
   );
