@@ -3,6 +3,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .profile-content h4 {
