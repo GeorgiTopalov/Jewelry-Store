@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import styles from "./../../styles/shop/productdetails.module.css";
 import Link from "next/link";
 
 const ProductComponent = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(null);
   const images = [
     "/Ring-sample1.jpg",
+    "/wearing-ring-2.jpg",
     "/Ring-sample2.jpg",
     "/Ring-sample3.jpg",
-    "/wearing-ring-sample1.jpg",
+  ];
+
+  const gridPositions = [
+    { gridColumn: "1 / 3", gridRow: "1 / 3" }, 
+    { gridColumn: "1 / 2", gridRow: "3 / 5" }, 
+    { gridColumn: "2 / 3", gridRow: "3 / 4" }, 
+    { gridColumn: "2 / 3", gridRow: "4 / 5" },
   ];
 
   const metalIcons = {
@@ -111,47 +119,84 @@ const ProductComponent = () => {
     ),
   };
 
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = screenWidth < 1024;
+
   const handlers = useSwipeable({
     onSwipedLeft: () =>
-      setActiveImage((prevIndex) => (prevIndex + 1) % images.length),
+      setActiveImageIndex((prevIndex) => (prevIndex + 1) % images.length),
     onSwipedRight: () =>
-      setActiveImage(
+      setActiveImageIndex(
         (prevIndex) => (prevIndex - 1 + images.length) % images.length
       ),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
 
-  // Event handler to set active image
+  if (screenWidth === null) return null;
+
   const setActiveImage = (index) => {
     setActiveImageIndex(index);
   };
 
   return (
     <div>
-      <div section="product">
+      <section className={styles["product"]}>
         <div className={styles["product-images"]} {...handlers}>
-          <img src={images[activeImageIndex]} alt="nice ring" />
-          <div className={styles["image-dots"]}>
-            {images.map((_, index) => (
-              <button
+          {isMobile ? (
+            // Mobile view with swipe functionality
+            <img src={images[activeImageIndex]} alt="nice ring" />
+          ) : (
+            // Desktop view with grid layout
+            images.map((src, index) => (
+              <img
                 key={index}
-                className={
-                  index === activeImageIndex
-                    ? styles["dot-active"]
-                    : styles["dot"]
-                }
-                onClick={() => setActiveImage(index)}
+                src={src}
+                alt={`Ring ${index}`}
+                style={{
+                  gridColumn: gridPositions[index].gridColumn,
+                  gridRow: gridPositions[index].gridRow,
+
+                }}
               />
-            ))}
-          </div>
+            ))
+          )}
+          {isMobile && (
+            <div className={styles["image-dots"]}>
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  className={
+                    index === activeImageIndex
+                      ? styles["dot-active"]
+                      : styles["dot"]
+                  }
+                  onClick={() => setActiveImageIndex(index)}
+                />
+              ))}
+            </div>
+          )}
         </div>
         <div className={styles["product-info"]}>
           <h2>Super Nice Ring</h2>
           <h6>in 9k gold with a beautiful diamond 3.2mm</h6>
           <form id={styles["product-form"]}>
             <div className={styles["metal"]}>
-              <label htmlFor="metal" id="metal"></label>
+              <label htmlFor="metal" id="metal">Metal</label>
               <select form="product-form"></select>
             </div>
             <div className={styles["ring-size form-section"]}>
@@ -223,9 +268,9 @@ const ProductComponent = () => {
             </p>
           </div>
         </div>
-        <div className={styles["reviews"]}></div>
-      </div>
-      <div section={styles["related-products"]}></div>
+        {/* <div className={styles["reviews"]}></div> */}
+      </section>
+      <div className={styles["related-products"]}></div>
     </div>
   );
 };
