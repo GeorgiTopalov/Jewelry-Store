@@ -289,36 +289,44 @@ const FilterSection = () => {
               )}
             </div>
           ))}
-          <div className={`${styles['filter-category']} ${styles['price-range']}`}>
+          <div
+            className={`${styles["filter-category"]} ${styles["price-range"]}`}
+          >
             <h4>Price Range</h4>
             <Range
-  step={50}
-  min={350}
-  max={5000}
-  values={priceRange}
-  onChange={(values) => setPriceRange(values)}
-  renderTrack={({ props, children }) => {
-    // Calculate the percentage of the left and right thumbs
-    const leftThumbPercentage = (priceRange[0] - 350) / (5000 - 350) * 100;
-    const rightThumbPercentage = (priceRange[1] - 350) / (5000 - 350) * 100;
+              step={50}
+              min={350}
+              max={5000}
+              values={priceRange}
+              onChange={(values) => setPriceRange(values)}
+              renderTrack={({ props, children }) => {
+                // Calculate the percentage of the left and right thumbs
+                const leftThumbPercentage =
+                  ((priceRange[0] - 350) / (5000 - 350)) * 100;
+                const rightThumbPercentage =
+                  ((priceRange[1] - 350) / (5000 - 350)) * 100;
 
-    return (
-      <div {...props} className={styles["slider-track"]} style={props.style}>
-        <div
-          className={styles["slider-track-active"]}
-          style={{
-            left: `${leftThumbPercentage}%`,
-            right: `${100 - rightThumbPercentage}%`,
-          }}
-        />
-        {children}
-      </div>
-    );
-  }}
-  renderThumb={({ props, index }) => (
-    <div {...props} className={styles["slider-thumb"]} />
-  )}
-/>
+                return (
+                  <div
+                    {...props}
+                    className={styles["slider-track"]}
+                    style={props.style}
+                  >
+                    <div
+                      className={styles["slider-track-active"]}
+                      style={{
+                        left: `${leftThumbPercentage}%`,
+                        right: `${100 - rightThumbPercentage}%`,
+                      }}
+                    />
+                    {children}
+                  </div>
+                );
+              }}
+              renderThumb={({ props, index }) => (
+                <div {...props} className={styles["slider-thumb"]} />
+              )}
+            />
 
             <div className={styles["price-numbers"]}>
               <span>Min: ${priceRange[0]}</span>
