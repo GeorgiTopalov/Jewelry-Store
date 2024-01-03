@@ -1,11 +1,13 @@
 import styles from "./../../styles/shop/filter.module.css";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Range } from "react-range";
 
 const FilterSection = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState({});
   const [windowWidth, setWindowWidth] = useState(undefined);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [priceRange, setPriceRange] = useState([350, 5000]);
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -23,7 +25,7 @@ const FilterSection = () => {
 
   const categories = {
     Category: ["Stack ring", "Wedding Band", "Engagement Ring", "Sets"],
-    Price: ["150$-300$", "300$-500$", "500$-800$", "800$-1200$", "1200$-2000$"],
+    // Price: ["150$-300$", "300$-500$", "500$-800$", "800$-1200$", "1200$-2000$"],
     Metal: ["Yellow Gold", "White Gold", "Rose Gold", "Platinum"],
     "Gemstone Shape": [
       "Oval",
@@ -272,7 +274,8 @@ const FilterSection = () => {
                 <div className={styles["sub-category"]}>
                   {options.map((option) => (
                     <label key={option} className={styles["filter-option"]}>
-                      {category === "Gemstone Shape" && gemstoneShapeIcons[option]}
+                      {category === "Gemstone Shape" &&
+                        gemstoneShapeIcons[option]}
                       {category === "Metal" && metalIcons[option]}
                       <input
                         className={styles["filter-checkbox"]}
@@ -286,6 +289,42 @@ const FilterSection = () => {
               )}
             </div>
           ))}
+          <div className={`${styles['filter-category']} ${styles['price-range']}`}>
+            <h4>Price Range</h4>
+            <Range
+  step={50}
+  min={350}
+  max={5000}
+  values={priceRange}
+  onChange={(values) => setPriceRange(values)}
+  renderTrack={({ props, children }) => {
+    // Calculate the percentage of the left and right thumbs
+    const leftThumbPercentage = (priceRange[0] - 350) / (5000 - 350) * 100;
+    const rightThumbPercentage = (priceRange[1] - 350) / (5000 - 350) * 100;
+
+    return (
+      <div {...props} className={styles["slider-track"]} style={props.style}>
+        <div
+          className={styles["slider-track-active"]}
+          style={{
+            left: `${leftThumbPercentage}%`,
+            right: `${100 - rightThumbPercentage}%`,
+          }}
+        />
+        {children}
+      </div>
+    );
+  }}
+  renderThumb={({ props, index }) => (
+    <div {...props} className={styles["slider-thumb"]} />
+  )}
+/>
+
+            <div className={styles["price-numbers"]}>
+              <span>Min: ${priceRange[0]}</span>
+              <span>Max: ${priceRange[1]}</span>
+            </div>
+          </div>
         </div>
       </div>
     </aside>

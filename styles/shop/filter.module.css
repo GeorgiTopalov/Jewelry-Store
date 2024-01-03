@@ -113,22 +113,72 @@
   gap: 1rem;
 }
 
-.filter-category:nth-child(4) .sub-category label,
-.filter-category:nth-child(3) .sub-category label{
+.filter-category:nth-child(3) .sub-category label,
+.filter-category:nth-child(2) .sub-category label{
   display: flex;
   flex-flow: row-reverse wrap;
   align-items: center;
   justify-content: space-between;
   width: 144px;
 }
-.filter-category:nth-child(4) .sub-category label svg{
+.filter-category:nth-child(3) .sub-category label svg{
   width: 48px;
   height: 48px;
 }
 
-.filter-category:nth-child(3) .sub-category label svg{
+.filter-category:nth-child(2) .sub-category label svg{
   width: 24px;
   height: 24px;
+}
+
+.price-range {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.price-range h4{
+  font-weight: 400;
+}
+
+.slider-track {
+  width: 100%;
+  height: 6px;
+  background: #ddd; /* Color for the part outside the thumbs */
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.slider-track-active {
+  background: var(--primary-color); /* Color for the part inside the thumbs */
+  height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  z-index: -2;
+}
+
+.slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--black);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+  z-index: 3; /* Make sure the thumb is above the active and full track */
+}
+
+
+.price-numbers {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 @media (min-width: 1200px) {
@@ -197,5 +247,9 @@
   
   .collapse-icon {
     display:none;
+  }
+
+  .price-range {
+    padding: 0 0 1rem 0;
   }
 }
