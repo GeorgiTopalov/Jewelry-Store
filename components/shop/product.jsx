@@ -13,111 +13,167 @@ const ProductComponent = () => {
     "/Ring-sample3.jpg",
   ];
 
+  const [metalName, setMetalName] = useState("");
+  const [selectedMetal, setSelectedMetal] = useState("");
+
+  const updateMetalName = (newMetalName) => {
+    setMetalName(newMetalName);
+  };
+
+  const handleMouseEnter = (metal) => {
+    updateMetalName(metal);
+  };
+
+  const handleMouseLeave = () => {
+    if (selectedMetal) {
+      updateMetalName(selectedMetal);
+    }
+  };
+
+  const handleClick = (metal) => {
+    setSelectedMetal(metal);
+    updateMetalName(metal);
+  };
+
   const gridPositions = [
-    { gridColumn: "1 / 3", gridRow: "1 / 3" }, 
-    { gridColumn: "1 / 2", gridRow: "3 / 5" }, 
-    { gridColumn: "2 / 3", gridRow: "3 / 4" }, 
+    { gridColumn: "1 / 3", gridRow: "1 / 3" },
+    { gridColumn: "1 / 2", gridRow: "3 / 5" },
+    { gridColumn: "2 / 3", gridRow: "3 / 4" },
     { gridColumn: "2 / 3", gridRow: "4 / 5" },
   ];
 
   const metalIcons = {
-    "Yellow Gold": (
-      <svg width="50" height="50" viewBox="0 0 50 50">
-        <defs>
-          <radialGradient
-            id="yellowGoldGradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-            fx="50%"
-            fy="50%"
-          >
-            <stop
-              offset="0%"
-              style={{ stopColor: "#FFF8DC", stopOpacity: 1 }}
-            />
-            <stop
-              offset="100%"
-              style={{ stopColor: "#FFD700", stopOpacity: 1 }}
-            />
-          </radialGradient>
-        </defs>
-        <circle cx="25" cy="25" r="20" fill="url(#yellowGoldGradient)" />
-      </svg>
-    ),
-    "White Gold": (
-      <svg width="50" height="50" viewBox="0 0 50 50">
-        <defs>
-          <radialGradient
-            id="whiteGoldGradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-            fx="50%"
-            fy="50%"
-          >
-            <stop
-              offset="0%"
-              style={{ stopColor: "#E5E4E2", stopOpacity: 1 }}
-            />
-            <stop
-              offset="100%"
-              style={{ stopColor: "#BCC0C1", stopOpacity: 1 }}
-            />
-          </radialGradient>
-        </defs>
-        <circle cx="25" cy="25" r="20" fill="url(#whiteGoldGradient)" />
-      </svg>
-    ),
-    "Rose Gold": (
-      <svg width="50" height="50" viewBox="0 0 50 50">
-        <defs>
-          <radialGradient
-            id="roseGoldGradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-            fx="50%"
-            fy="50%"
-          >
-            <stop
-              offset="0%"
-              style={{ stopColor: "#E8CCB1", stopOpacity: 1 }}
-            />
-            <stop
-              offset="100%"
-              style={{ stopColor: "#DDB6A1", stopOpacity: 1 }}
-            />
-          </radialGradient>
-        </defs>
-        <circle cx="25" cy="25" r="20" fill="url(#roseGoldGradient)" />
-      </svg>
-    ),
-    Platinum: (
-      <svg width="50" height="50" viewBox="0 0 50 50">
-        <defs>
-          <radialGradient
-            id="platinumGradient"
-            cx="50%"
-            cy="50%"
-            r="50%"
-            fx="50%"
-            fy="50%"
-          >
-            <stop
-              offset="0%"
-              style={{ stopColor: "#E5E4E2", stopOpacity: 1 }}
-            />
-            <stop
-              offset="100%"
-              style={{ stopColor: "#A5A5A5", stopOpacity: 1 }}
-            />
-          </radialGradient>
-        </defs>
-        <circle cx="25" cy="25" r="20" fill="url(#platinumGradient)" />
-      </svg>
-    ),
+    "14k Yellow Gold": "/y-gold-grad.svg",
+    "14k White Gold": "/w-gold-grad.svg",
+    "14k Rose Gold": "/r-gold-grad.svg",
+    Platinum: "/w-gold-grad.svg",
   };
+
+  // const metalIcons = {
+  //   "Yellow Gold": (
+  //     <svg
+  //       version="1.1"
+  //       id="Layer_1"
+  //       x="0px"
+  //       y="0px"
+  //       viewBox="0 0 32 32"
+  //       style={{ enableBackground: "new 0 0 32 32" }}
+  //       xmlSpace="preserve"
+  //     >
+  //       <style type="text/css">
+  //         {`.st0{fill:url(#SVGID_1_); stroke:#FFFFFF; strokeMiterlimit:10;}`}
+  //       </style>
+  //       <radialGradient
+  //         id="SVGID_1_"
+  //         cx="16.2867"
+  //         cy="16.2581"
+  //         r="13.913"
+  //         gradientTransform="matrix(1 0 0 2 0 -16.2581)"
+  //         gradientUnits="userSpaceOnUse"
+  //       >
+  //         <stop offset="0" style={{ stopColor: "#FFFFFF" }} />
+  //         <stop offset="0.0162" style={{ stopColor: "#FFFEFA" }} />
+  //         <stop offset="0.1913" style={{ stopColor: "#FBF0C9" }} />
+  //         <stop offset="0.3569" style={{ stopColor: "#F9E4A2" }} />
+  //         <stop offset="0.5084" style={{ stopColor: "#F7DD86" }} />
+  //         <stop offset="0.6411" style={{ stopColor: "#F5D875" }} />
+  //         <stop offset="0.7402" style={{ stopColor: "#F5D66F" }} />
+  //       </radialGradient>
+  //       <circle className="st0" cx="16.29" cy="16.26" r="5" />
+  //     </svg>
+  //   ),
+  //   "White Gold": (
+  //     <svg
+  //       version="1.1"
+  //       id="Layer_1"
+  //       x="0px"
+  //       y="0px"
+  //       viewBox="0 0 8 8"
+  //       style={{ enableBackground: "new 0 0 8 8" }}
+  //       xmlSpace="preserve"
+  //     >
+  //       <style type="text/css">
+  //         {`.st0 {fill: url(#SVGID_1_); stroke: #FFFFFF; stroke-miterlimit: 10;}`}
+  //       </style>
+  //       <radialGradient
+  //         id="SVGID_1_"
+  //         cx="4"
+  //         cy="4"
+  //         r="3.5"
+  //         gradientTransform="matrix(1 0 0 2 0 -4)"
+  //         gradientUnits="userSpaceOnUse"
+  //       >
+  //         <stop offset="0" style={{ stopColor: "#FFFFFF" }} />
+  //         <stop offset="0.1259" style={{ stopColor: "#EEEEEF" }} />
+  //         <stop offset="0.3681" style={{ stopColor: "#D2D3D5" }} />
+  //         <stop offset="0.581" style={{ stopColor: "#C1C3C5" }} />
+  //         <stop offset="0.7402" style={{ stopColor: "#BBBDBF" }} />
+  //       </radialGradient>
+  //       <circle className="st0" cx="4" cy="4" r="1" />
+  //     </svg>
+  //   ),
+  //   "Rose Gold": (
+  //     <svg
+  //       version="1.1"
+  //       id="Layer_1"
+  //       x="0px"
+  //       y="0px"
+  //       viewBox="0 0 32 32"
+  //       style={{ enableBackground: "new 0 0 32 32" }}
+  //       xmlSpace="preserve"
+  //     >
+  //       <style type="text/css">
+  //         {`.st0{fill:url(#SVGID_1_); stroke:#FFFFFF; strokeMiterlimit:10;}`}
+  //       </style>
+  //       <radialGradient
+  //         id="SVGID_1_"
+  //         cx="16.2867"
+  //         cy="16.2581"
+  //         r="13.913"
+  //         gradientTransform="matrix(1 0 0 2 0 -16.2581)"
+  //         gradientUnits="userSpaceOnUse"
+  //       >
+  //         <stop offset="0" style={{ stopColor: "#FFFFFF" }} />
+  //         <stop offset="0.0911" style={{ stopColor: "#FDEDEA" }} />
+  //         <stop offset="0.2859" style={{ stopColor: "#F8CCC4" }} />
+  //         <stop offset="0.4655" style={{ stopColor: "#F5B5A8" }} />
+  //         <stop offset="0.6227" style={{ stopColor: "#F3A697" }} />
+  //         <stop offset="0.7402" style={{ stopColor: "#F2A191" }} />
+  //       </radialGradient>
+  //       <circle className="st0" cx="16.29" cy="16.26" r="13.91" />
+  //     </svg>
+  //   ),
+  //   Platinum: (
+  //     <svg
+  //       version="1.1"
+  //       id="Layer_1"
+  //       x="0px"
+  //       y="0px"
+  //       viewBox="0 0 32 32"
+  //       style={{ enableBackground: "new 0 0 32 32" }}
+  //       xmlSpace="preserve"
+  //     >
+  //       <style type="text/css">
+  //       {`.st0 {fill: url(#SVGID_1_); stroke: #FFFFFF; stroke-miterlimit: 10;}`}
+  //       </style>
+  //       <radialGradient
+  //         id="SVGID_1_"
+  //         cx="16.2867"
+  //         cy="16.2581"
+  //         r="13.913"
+  //         gradientTransform="matrix(1 0 0 2 0 -16.2581)"
+  //         gradientUnits="userSpaceOnUse"
+  //       >
+  //         <stop offset="0" style={{ stopColor: "#FFFFFF" }} />
+  //         <stop offset="0.1259" style={{ stopColor: "#EEEEEF" }} />
+  //         <stop offset="0.3681" style={{ stopColor: "#D2D3D5" }} />
+  //         <stop offset="0.581" style={{ stopColor: "#C1C3C5" }} />
+  //         <stop offset="0.7402" style={{ stopColor: "#BBBDBF" }} />
+  //       </radialGradient>
+  //       <circle className="st0" cx="16.29" cy="16.26" r="13.91" />
+  //     </svg>
+  //   ),
+  // };
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -170,7 +226,6 @@ const ProductComponent = () => {
                 style={{
                   gridColumn: gridPositions[index].gridColumn,
                   gridRow: gridPositions[index].gridRow,
-
                 }}
               />
             ))
@@ -196,8 +251,28 @@ const ProductComponent = () => {
           <h6>in 9k gold with a beautiful diamond 3.2mm</h6>
           <form id={styles["product-form"]}>
             <div className={styles["metal"]}>
-              <label htmlFor="metal" id="metal">Metal</label>
-              <select form="product-form"></select>
+              <label htmlFor="metal" id="metal">
+                Metal: <span className={styles["metal-name"]}>{metalName}</span>
+              </label>
+              <div className={styles["metal-icons"]}>
+                {Object.entries(metalIcons).map(([metal, iconPath]) => (
+                  <div
+                    key={metal}
+                    onMouseEnter={() => handleMouseEnter(metal)}
+                    onMouseLeave={handleMouseLeave}
+                    onClick={() => handleClick(metal)}
+                    className={`${styles["metal-icon"]} ${
+                      selectedMetal === metal ? styles["selected"] : ""
+                    }`}
+                  >
+                    <img
+                      src={iconPath}
+                      alt={metal}
+                      style={{ width: "32px", height: "32px" }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
             <div className={styles["ring-size form-section"]}>
               <div className={styles["ring-size-select"]}>

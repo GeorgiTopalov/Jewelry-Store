@@ -181,6 +181,8 @@
   margin-top: 1rem;
 }
 
+
+
 @media (min-width: 1200px) {
   .btn-filter {
     display: none;
