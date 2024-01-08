@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
+	.st0{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-miterlimit:10;}
 </style>
 <radialGradient id="SVGID_1_" cx="4" cy="4" r="3.5" gradientTransform="matrix(1 0 0 2 0 -4)" gradientUnits="userSpaceOnUse">
 	<stop  offset="0" style="stop-color:#FFFFFF"/>
