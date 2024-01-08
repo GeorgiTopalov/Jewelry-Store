@@ -12,9 +12,23 @@ const ProductComponent = () => {
     "/Ring-sample2.jpg",
     "/Ring-sample3.jpg",
   ];
+  const gridPositions = [
+    { gridColumn: "1 / 3", gridRow: "1 / 3" },
+    { gridColumn: "1 / 2", gridRow: "3 / 5" },
+    { gridColumn: "2 / 3", gridRow: "3 / 4" },
+    { gridColumn: "2 / 3", gridRow: "4 / 5" },
+  ];
+
+
+  const metalIcons = {
+    "14k Yellow Gold": "/y-gold-grad.svg",
+    "14k White Gold": "/w-gold-grad.svg",
+    "14k Rose Gold": "/r-gold-grad.svg",
+    Platinum: "/w-gold-grad.svg",
+  };
 
   const [metalName, setMetalName] = useState("");
-  const [selectedMetal, setSelectedMetal] = useState("");
+  const [selectedMetal, setSelectedMetal] = useState(Object.keys(metalIcons)[0]);
 
   const updateMetalName = (newMetalName) => {
     setMetalName(newMetalName);
@@ -35,19 +49,7 @@ const ProductComponent = () => {
     updateMetalName(metal);
   };
 
-  const gridPositions = [
-    { gridColumn: "1 / 3", gridRow: "1 / 3" },
-    { gridColumn: "1 / 2", gridRow: "3 / 5" },
-    { gridColumn: "2 / 3", gridRow: "3 / 4" },
-    { gridColumn: "2 / 3", gridRow: "4 / 5" },
-  ];
 
-  const metalIcons = {
-    "14k Yellow Gold": "/y-gold-grad.svg",
-    "14k White Gold": "/w-gold-grad.svg",
-    "14k Rose Gold": "/r-gold-grad.svg",
-    Platinum: "/w-gold-grad.svg",
-  };
 
   // const metalIcons = {
   //   "Yellow Gold": (
