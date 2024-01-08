@@ -11,7 +11,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding:0;
+    padding: 0;
 }
 
 .dropdown-button {
@@ -36,6 +36,10 @@
 }
 .account-menu{
     border-bottom: 1px solid var(--grey);
+}
+
+.account-content {
+    padding-bottom: 1rem;
 }
 
 

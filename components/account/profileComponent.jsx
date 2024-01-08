@@ -1,14 +1,30 @@
 import React from "react";
-import Link from "next/link";
+import {useState} from "react";
 import styles from "./../../styles/account/profile.module.css";
 import AccountLayout from "./accountLayoutComponent";
 
 const ProfleComponent = () => {
+
+  const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
+  const [year, setYear] = useState('');
+
+  const handleDayChange = (e) => setDay(e.target.value);
+  const handleMonthChange = (e) => setMonth(e.target.value);
+  const handleYearChange = (e) => setYear(e.target.value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Process the birthdate data
+    console.log({ day, month, year });
+  };
+
+
   return (
     <AccountLayout>
       <div className={styles["profile-content"]}>
         <h4>My Profile</h4>
-        <form className={styles["profile-form"]}>
+        <form onSubmit={handleSubmit} className={styles["profile-form"]}>
           <div className={styles["first-name"]}>
             <label htmlFor="first-name">First Name:</label>
             <input
@@ -32,13 +48,36 @@ const ProfleComponent = () => {
             </select>
           </div>
           <div className={styles["birthdate"]}>
-          <label htmlFor="birthdate">Birthdate:(optional)</label>
-            <input type="text" id="day" name="day"></input>
-            <input type="text" id="month" name="month"></input>
-            <input type="text" id="year" name="year"></input>
+            <label htmlFor="birthdate">Birthdate (optional):</label>
+            <input
+              type="text"
+              id="day"
+              name="day"
+              placeholder="Day"
+              value={day}
+              onChange={handleDayChange}
+            />
+            <input
+              type="text"
+              id="month"
+              name="month"
+              placeholder="Month"
+              value={month}
+              onChange={handleMonthChange}
+            />
+            <input
+              type="text"
+              id="year"
+              name="year"
+              placeholder="Year"
+              value={year}
+              onChange={handleYearChange}
+            />
           </div>
           <div>
-            <button className="btn form-btn" type="submit">Update Profile</button>
+            <button className="btn form-btn" type="submit">
+              Update Profile
+            </button>
           </div>
         </form>
       </div>

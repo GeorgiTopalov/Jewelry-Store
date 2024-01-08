@@ -154,7 +154,7 @@ const AccountLayout = ({ children }) => {
           </Link>
         </ul>
       )}
-      <div>{children}</div>
+      <div className={styles["account-content"]}>{children}</div>
     </section>
   );
 };
