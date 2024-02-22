@@ -5,6 +5,9 @@ const HomeCategoriesComponent = () => {
   return (
     <div className={styles["categories"]}>
       <h2 className={styles["title"]}>Explore Our Selections</h2>
+
+    
+
       <div id={styles["grid"]}>
         <div className={styles["rings"]}></div>
         <div className={styles["earrings"]}></div>
