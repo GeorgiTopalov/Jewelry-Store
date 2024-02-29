@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import CollapsibleSection from "./collabsibleSection";
-import styles from "./../styles/layout/layout.module.css";
+import styles from "./layout.module.css";
 
 const Layout = ({ children }) => {
   const customerCareLinks = [
@@ -122,7 +122,7 @@ l0 -64 -2010 0 -2010 0 0 64 c0 162 51 428 122 636 48 141 157 365 235 485
           </Link>
         </div>
       </header>
-      <main>{children}</main>
+      <body>{children}</body>
       <footer id={styles["footer"]}>
         <div className={styles["newsletter"]}>
           <h3>Sign up for our Newsletter!</h3>

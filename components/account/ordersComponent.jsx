@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import styles from "./../../styles/account/orders.module.css";
+import styles from "./orders.module.css";
 import AccountLayout from "./accountLayoutComponent";
 
 const Orders = [

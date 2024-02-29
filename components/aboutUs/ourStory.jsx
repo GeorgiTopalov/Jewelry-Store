@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./../../styles/aboutUs/ourStory.module.css";
+import styles from "./ourStory.module.css";
 
 const OurStory = () => {
   return (

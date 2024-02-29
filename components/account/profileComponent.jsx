@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from "react";
-import styles from "./../../styles/account/profile.module.css";
+import styles from "./profile.module.css";
 import AccountLayout from "./accountLayoutComponent";
 
 const ProfleComponent = () => {

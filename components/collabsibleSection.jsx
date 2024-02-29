@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import styles from "./../styles/layout/collapsibleSection.module.css";
+import styles from "./collapsibleSection.module.css";
 
 const CollapsibleSection = ({ title, links, additionalClass }) => {
   const [isOpen, setIsOpen] = useState(false);

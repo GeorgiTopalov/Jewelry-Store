@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./../../styles/authentication/login.module.css";
+import styles from "./login.module.css";
 
 const LoginForm = () => {
   return (

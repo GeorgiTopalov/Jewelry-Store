@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
-import styles from "./../../styles/shop/productdetails.module.css";
+import styles from "./product.module.css";
 import Link from "next/link";
 
 const ProductComponent = () => {

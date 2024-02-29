@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./../../styles/account/accountLayout.module.css";
+import styles from "./accountLayout.module.css";
 
 const AccountLayout = ({ children }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./../../styles/authentication/register.module.css";
+import styles from "./register.module.css";
 
 const RegisterForm = () => {
   return (

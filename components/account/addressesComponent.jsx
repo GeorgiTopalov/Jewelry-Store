@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import styles from "./../../styles/account/addresses.module.css";
+import styles from "./addresses.module.css";
 import AccountLayout from "./accountLayoutComponent";
 
 const AddressesComponent = () => {

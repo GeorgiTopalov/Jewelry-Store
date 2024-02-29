@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./../../styles/shop/shopItems.module.css";
+import styles from "./shopItems.module.css";
 import Link from "next/link";
 
 const ShopItems = () => {

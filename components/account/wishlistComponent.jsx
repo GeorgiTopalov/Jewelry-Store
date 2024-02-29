@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import styles from './../../styles/account/wishlist.module.css';
+import styles from './wishlist.module.css';
 import AccountLayout from './accountLayoutComponent';
 
 // const WishlistComponent = () => {

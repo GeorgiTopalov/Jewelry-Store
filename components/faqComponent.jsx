@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./../styles/faq.module.css";
+import styles from "./faq.module.css";
 
 const FaqComponent = () => {
   return (

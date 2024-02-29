@@ -1,4 +1,4 @@
-import styles from "./../../styles/shop/filter.module.css";
+import styles from "./filter.module.css";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Range } from "react-range";

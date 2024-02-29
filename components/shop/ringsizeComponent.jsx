@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./../../styles/shop/ringsize.module.css";
+import styles from "./ringsize.module.css";
 
 const RingSizeComponent = () => {
   return (

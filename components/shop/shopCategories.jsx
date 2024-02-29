@@ -1,10 +1,11 @@
-import styles from "./../../styles/shop/shopCategories.module.css";
+import styles from "./shopCategories.module.css";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 
 const ShopCategories = () => {
     return (
-  <section className={styles["categories"]}>
+  <section className={styles["category-wrap"]}>
+    <h2>Categories</h2>
+    <div className={styles["categories"]}>
     <div>
       <div className={styles["category-img"]}></div>
       <h6 className={styles["category-name"]}>Rings</h6>
@@ -20,6 +21,7 @@ const ShopCategories = () => {
     <div>
       <div className={styles["category-img"]}></div>
       <h6 className={styles["category-name"]}>Bracelets</h6>
+    </div>
     </div>
   </section>
   );
