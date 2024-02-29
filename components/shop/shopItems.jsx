@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./shopItems.module.css";
 import Link from "next/link";
+import { useSwipeable } from "react-swipeable";
+
 
 const ShopItems = () => {
   return (

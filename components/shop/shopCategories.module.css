@@ -1,16 +1,30 @@
-.category-wrap {
+.category-section{
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+}
+
+.category-wrap {
+  width: 100vw;
+  overflow-x: auto;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .categories {
   display: flex;
   flex-flow: row nowrap;
   gap: 3rem;
-  justify-content: center;
   text-align: center;
+  overflow-x: auto;
+}
+
+.categories::before,
+.categories::after {
+  content: '';
+  width: 5vw; /* Half of the viewport width */
+  flex-shrink: 0; /* Prevent it from shrinking */
 }
 
 .category-name{
