@@ -4,6 +4,17 @@ import CollapsibleSection from "./collabsibleSection";
 import styles from "./layout.module.css";
 
 const Layout = ({ children }) => {
+  const navItems = [
+    { href: "/shop", label: "Rings" },
+    { href: "/shop", label: "Earrings" },
+    { href: "/shop", label: "Charms" },
+    {
+      href: "/account/profile",
+      label: "Account",
+      className: styles["nav-account"],
+    },
+  ];
+
   const customerCareLinks = [
     { href: "/contactus", text: "Contact Us" },
     { href: "/faq", text: "FAQ" },
@@ -49,34 +60,18 @@ const Layout = ({ children }) => {
         </Link>
         <nav className={styles["nav"]}>
           <ul>
-            <li>
-              <Link href="/engagement" className={styles["nav-item"]}>
-                Rings
-              </Link>
-            </li>
-            <li>
-              <Link href="/wedding" className={styles["nav-item"]}>
-                Earrings
-              </Link>
-            </li>
-            <li>
-              <Link href="gifts" className={styles["nav-item"]}>
-                Charms
-              </Link>
-            </li>
-            <li className={styles["nav-account"]}>
-              <Link href="account/profile" className={styles["nav-item"]}>
-                Account
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li className={item.className}>
+                <Link href={item.href} className={styles["nav-item"]}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className={styles["acc-icons"]}>
           <Link href="account/wishlist" className={styles["wish-icon"]}>
-            <svg
-              viewBox="0 0 240 240"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
               <path d="M128.00586,220a3.993,3.993,0,0,1-1.9541-.51,312.79378,312.79378,0,0,1-50.72168-37.01685C41.27344,151.82263,24.00586,121.38306,24.00586,92a56.013,56.013,0,0,1,104-28.87823A56.013,56.013,0,0,1,232.00586,92c0,29.38306-17.26758,59.82263-51.32422,90.47314A312.79378,312.79378,0,0,1,129.96,219.49,3.993,3.993,0,0,1,128.00586,220Zm-48-176a48.054,48.054,0,0,0-48,48c0,59.701,82.17578,111.14148,96,119.36853,13.82422-8.227,96-59.66754,96-119.36853a48.00892,48.00892,0,0,0-92.30957-18.49268,3.99954,3.99954,0,0,1-7.38086,0A47.90343,47.90343,0,0,0,80.00586,44Z" />
             </svg>
           </Link>
@@ -122,7 +117,7 @@ l0 -64 -2010 0 -2010 0 0 64 c0 162 51 428 122 636 48 141 157 365 235 485
           </Link>
         </div>
       </header>
-      <body>{children}</body>
+      <main>{children}</main>
       <footer id={styles["footer"]}>
         <div className={styles["newsletter"]}>
           <h3>Sign up for our Newsletter!</h3>
