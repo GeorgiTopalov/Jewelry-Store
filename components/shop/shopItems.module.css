@@ -51,6 +51,8 @@
     width: 264px;
   }
 }
+
+
 @media (min-width: 800px) {
 
   #items-area {
@@ -68,9 +70,6 @@
     filter: brightness(105%);
   }
 
-  .product-card .btn-shop {
-    display: none;
-  }
 
   .wish-container {
     display: flex;
