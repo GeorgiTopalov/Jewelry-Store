@@ -25,7 +25,7 @@
 }
 
 .blog-img {
-    background-image: url(../public/OurMission.jpg);
+    background-image: url(./../../public/OurMission.jpg);
     background-position: center;
     background-size:cover;
     height: 240px;
@@ -130,7 +130,7 @@
 }
 
 .recent-posts-img {
-    background-image: url(../public/OurMission.jpg);
+    background-image: url(./../../public/OurMission.jpg);
     background-position: center;
     background-size:cover;
     height: 96px;

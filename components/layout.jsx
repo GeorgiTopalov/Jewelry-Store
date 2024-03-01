@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
         <nav className={styles["nav"]}>
           <ul>
             {navItems.map((item) => (
-              <li className={item.className}>
+              <li key={item.label} className={item.className}>
                 <Link href={item.href} className={styles["nav-item"]}>
                   {item.label}
                 </Link>
