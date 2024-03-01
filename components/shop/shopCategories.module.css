@@ -44,4 +44,7 @@
     overflow-x: none;
     align-items: center;
   }
+  .categories {
+    padding: 0 4rem 0 4rem;
+  }
 }

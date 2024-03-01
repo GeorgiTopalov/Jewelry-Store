@@ -4,12 +4,16 @@ import React, { useState, useEffect } from "react";
 const ShopCategories = () => {
   useEffect(() => {
     const adjustPadding = () => {
+      const screenWidth = window.innerWidth;
       const categoriesElement = document.querySelector(`.${styles.categories}`);
-      if (categoriesElement && categoriesElement.firstChild) {
-        const screenWidth = window.innerWidth;
+      if (!categoriesElement) return;
+
+       if (screenWidth < 768) { 
         const itemWidth = categoriesElement.firstChild.offsetWidth;
         const paddingLeft = (screenWidth - itemWidth) / 2;
         categoriesElement.style.paddingLeft = `${paddingLeft}px`;
+      } else {
+        categoriesElement.style.paddingLeft = '4rem'; // Reset padding for larger screens
       }
     };
 
