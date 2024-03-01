@@ -18,6 +18,7 @@
   flex-flow: column wrap;
   justify-content: flex-end;
   align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .btn-shop {
@@ -27,7 +28,6 @@
   align-items: center;
   display: none;
 }
-
 
 .product p {
   margin: 0;
@@ -52,11 +52,9 @@
   }
 }
 
-
 @media (min-width: 800px) {
-
   #items-area {
-    grid-area: 1 / 2 / 4 / 9
+    grid-area: 1 / 2 / 4 / 9;
   }
   .product-card {
     display: flex;
@@ -67,9 +65,8 @@
   }
 
   .product-card:hover {
-    filter: brightness(105%);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
   }
-
 
   .wish-container {
     display: flex;
@@ -88,8 +85,7 @@
     fill: var(--primary-color);
   }
 
-  .product-card:hover .btn-shop
-   {
+  .product-card:hover .btn-shop {
     display: flex;
     width: 352px;
     justify-content: center;
