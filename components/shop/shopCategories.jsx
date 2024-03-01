@@ -1,6 +1,5 @@
 import styles from "./shopCategories.module.css";
 import React, { useState, useEffect } from "react";
-import { useSwipeable } from "react-swipeable";
 
 const ShopCategories = () => {
 

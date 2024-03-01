@@ -43,3 +43,10 @@
 .category-img:hover {
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
 }
+
+@media (min-width: 800px) {
+  .category-wrap {
+    overflow-x: none;
+    align-items: center;
+  }
+}
