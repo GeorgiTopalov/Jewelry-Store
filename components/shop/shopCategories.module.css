@@ -18,13 +18,7 @@
   gap: 3rem;
   text-align: center;
   overflow-x: auto;
-}
-
-.categories::before,
-.categories::after {
-  content: '';
-  width: 5vw; /* Half of the viewport width */
-  flex-shrink: 0; /* Prevent it from shrinking */
+  padding-right: 4rem;
 }
 
 .category-name{
@@ -39,6 +33,7 @@
   height: 200px;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5);
 }
+
 
 .category-img:hover {
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
