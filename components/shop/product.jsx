@@ -19,7 +19,6 @@ const ProductComponent = () => {
     { gridColumn: "2 / 3", gridRow: "4 / 5" },
   ];
 
-
   const metalIcons = {
     "14k Yellow Gold": "/y-gold-grad.svg",
     "14k White Gold": "/w-gold-grad.svg",
@@ -28,7 +27,9 @@ const ProductComponent = () => {
   };
 
   const [metalName, setMetalName] = useState("");
-  const [selectedMetal, setSelectedMetal] = useState(Object.keys(metalIcons)[0]);
+  const [selectedMetal, setSelectedMetal] = useState(
+    Object.keys(metalIcons)[0]
+  );
 
   const updateMetalName = (newMetalName) => {
     setMetalName(newMetalName);
@@ -48,8 +49,6 @@ const ProductComponent = () => {
     setSelectedMetal(metal);
     updateMetalName(metal);
   };
-
-
 
   // const metalIcons = {
   //   "Yellow Gold": (
@@ -250,9 +249,9 @@ const ProductComponent = () => {
         </div>
         <div className={styles["product-info"]}>
           <h2>Super Nice Ring</h2>
-          <h6>in 9k gold with a beautiful diamond 3.2mm</h6>
+          <h5>in 9k gold with a beautiful diamond 3.2mm</h5>
           <form id={styles["product-form"]}>
-            <div className={styles["metal"]}>
+            <div className={`${styles["metal"]} ${styles["form-section"]}`}>
               <label htmlFor="metal" id="metal">
                 Metal: <span className={styles["metal-name"]}>{metalName}</span>
               </label>
@@ -276,7 +275,7 @@ const ProductComponent = () => {
                 ))}
               </div>
             </div>
-            <div className={styles["ring-size form-section"]}>
+            <div className={`${styles["ring-size"]} ${styles["form-section"]}`}>
               <div className={styles["ring-size-select"]}>
                 <label htmlFor="ringsize" id="ringsize">
                   Ring Size
@@ -318,7 +317,7 @@ const ProductComponent = () => {
             </button>
           </form>
 
-          <div className={styles["delivery"]}>
+          <div className={styles["extras"]}>
             <div className={styles["delivery-svg"]}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -329,10 +328,29 @@ const ProductComponent = () => {
                 <path d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
               </svg>
             </div>
-            <p className={styles["delivery-text"]}>
-              Free shipping. Order now and your order will be shipped within 10
-              days!
-            </p>
+            <div className={styles["extras-text"]}>
+              <h5>Free shipping.</h5>
+              <p>Order now and your order will be shipped within 10 days!</p>
+            </div>
+          </div>
+          <div className={styles["extras"]}>
+            <div className={styles["returns-svg"]}>
+              <svg xmlns="http://www.w3.org/2000/svg" height="32"
+                width="40" viewBox="0 0 512 512">
+                <path
+                  d="M32 96l320 0V32c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c6 6 
+9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-96 96c-9.2 9.2-22.9 11.9-34.9 
+6.9s-19.8-16.6-19.8-29.6V160L32 160c-17.7 0-32-14.3-32-32s14.3-32 
+32-32zM480 352c17.7 0 32 14.3 32 32s-14.3 32-32 32H160v64c0 12.9-7.8 
+24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-96-96c-6-6-9.4-14.1-9.4-22.6s3.4-16.6 
+9.4-22.6l96-96c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 64H480z"
+                />
+              </svg>
+            </div>
+            <div className={styles["extras-text"]}>
+              <h5>Free returns.</h5>
+              <p>We offer free returns within the first 30 days!</p>
+            </div>
           </div>
           <div className={styles["info-section"]}>
             <h3>Description and details</h3>
