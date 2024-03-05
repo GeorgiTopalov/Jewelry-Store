@@ -117,6 +117,21 @@ img {
   transition: 0.6s;
 }
 
+.card {
+  background-image: url(../public/Ring-sample1.jpg);
+  background-position: center;
+  background-size: cover;
+  flex-basis: 47%;
+  margin-top: 2%;
+  height: 176px;
+  width: 176px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
 .input-row {
   display: flex;
   flex-flow: row nowrap;
@@ -173,4 +188,15 @@ input:focus {
 }
 
 @media (min-width: 800px) {
+  .card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 352px;
+    width: 352px;
+  }
+
+  .card:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  }
 }

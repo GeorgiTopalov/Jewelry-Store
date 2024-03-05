@@ -1,45 +1,100 @@
 .most-popular {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--h3);
-    font-family: var(--sans-serif);
-    margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--h3);
+  font-family: var(--sans-serif);
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.most-popular-items {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+}
+
+.most-popular-items a {
+  flex: 0 0 auto;
 }
 
 .shop-link {
-    text-decoration: none;
-    color: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-decoration: none;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .shop-link h4 {
-    position: relative; /* Ensure the pseudo-element is positioned in relation to this */
-    padding: 10px; /* Add some padding to increase the clickable area */
-    border: 1px solid var(--black); /* Outer border */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: color 0.3s; /* Smooth transition for text color */
-    height: 48px;
+  position: relative;
+  padding: 10px;
+  border: 1px solid var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s;
+  height: 48px;
 }
 
 .shop-link h4:after {
-    content: "";
-    position: absolute;
-    bottom: 10px; /* Position it right below the text */
-    left: 10px;
-    right: 10px;
-    height: 2px;
-    background-color: var(--primary-color);
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-    transform-origin: center; /* Ensures the scaling is from the center */
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: center;
 }
 
 .shop-link h4:hover:after {
-    transform: scaleX(1); /* Extend the pseudo-element to full width on hover */
+  transform: scaleX(1);
+}
+
+.card {
+  background-image: url(../../public/Ring-sample1.jpg);
+  background-position: center;
+  background-size: cover;
+  flex-basis: 32%;
+  margin-top: 2%;
+  height: 256px;
+  width: 256px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.title {
+  display: flex;
+  text-align: center;
+  font-family: var(--sans-serif);
+}
+
+@media (min-width: 800px) {
+  #items-area {
+    grid-area: 1 / 2 / 4 / 9;
+  }
+
+  .card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 352px;
+    width: 352px;
+  }
+
+  .card:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  }
 }
