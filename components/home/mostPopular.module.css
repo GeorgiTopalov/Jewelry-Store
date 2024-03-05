@@ -1,0 +1,41 @@
+
+.most-popular {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--h3);
+    font-family: var(--sans-serif);
+    margin: 2rem 0 2rem 0;
+  }
+  
+  .shop-link {
+    text-decoration: none;
+    color: var(--black);
+  }
+  
+  .shop-link h4:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .shop-link h4:hover:after {
+    transform: scaleX(1);
+  }
+  
+  .shop-link h4 {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .shop-link h4 {
+    border: 1px solid var(--black);
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    width: 148px;
+  }
