@@ -4,26 +4,26 @@ import Link from "next/link";
 
 const mostPopularItems = [
   {
-    href: "/shop/productdetail",
+    href: "/productdetail",
     className: styles["card"],
     background: "url('/images/Ring-sample1.jpg')",
   },
   {
-    href: "/shop/productdetail",
+    href: "/productdetail",
     className: styles["card"],
     background: "url('/images/Ring-sample2.jpg')",
   },
   {
-    href: "/shop/productdetail",
+    href: "/productdetail",
     className: styles["card"],
     background: "url('/images/Ring-sample3.jpg')",
   },
   {
-    href: "/shop/productdetail",
+    href: "/productdetail",
     className: styles["card"],
     background: "url('/images/Ring-sample3.jpg')",
   },{
-    href: "/shop/productdetail",
+    href: "/productdetail",
     className: styles["card"],
     background: "url('/images/Ring-sample3.jpg')",
   },
