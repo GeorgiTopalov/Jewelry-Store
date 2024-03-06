@@ -18,6 +18,15 @@ const mostPopularItems = [
     className: styles["card"],
     background: "url('/images/Ring-sample3.jpg')",
   },
+  {
+    href: "/shop/productdetail",
+    className: styles["card"],
+    background: "url('/images/Ring-sample3.jpg')",
+  },{
+    href: "/shop/productdetail",
+    className: styles["card"],
+    background: "url('/images/Ring-sample3.jpg')",
+  },
 ];
 
 const MostPopularComponent = () => {

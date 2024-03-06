@@ -1,5 +1,6 @@
 .title {
-    display: flex;
-    text-align: center;
-    font-family: var(--sans-serif);
-  }
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--sans-serif);
+}

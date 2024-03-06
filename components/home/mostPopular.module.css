@@ -82,10 +82,9 @@
 }
 
 @media (min-width: 800px) {
-  #items-area {
-    grid-area: 1 / 2 / 4 / 9;
+  .most-popular-items {
+    justify-content: center;
   }
-
   .card {
     display: flex;
     flex-flow: column wrap;
