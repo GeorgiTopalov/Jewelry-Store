@@ -1,10 +1,10 @@
-import React from "react";
+import { React } from "react";
 import styles from "./mostPopular.module.css";
 import Link from "next/link";
 
 const mostPopularItems = [
   {
-    href: "/productdetail",
+    href: "/productdetail/",
     className: styles["card"],
     background: "url('/images/Ring-sample1.jpg')",
   },
@@ -30,6 +30,7 @@ const mostPopularItems = [
 ];
 
 const MostPopularComponent = () => {
+
   return (
     <div className={styles["most-popular"]}>
       <h2 className={styles["title"]}>Most Popular Jewelry</h2>
@@ -49,5 +50,6 @@ const MostPopularComponent = () => {
     </div>
   );
 };
+
 
 export default MostPopularComponent;

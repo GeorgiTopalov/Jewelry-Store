@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./shopItems.module.css";
 import Link from "next/link";
 
-
 const ShopItems = () => {
+
   return (
     <div id={styles["items-area"]}>
       <div className={styles["product"]}>
@@ -219,3 +219,4 @@ const ShopItems = () => {
 };
 
 export default ShopItems;
+

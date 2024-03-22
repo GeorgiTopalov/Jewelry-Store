@@ -6,7 +6,9 @@ import MostPopularComponent from "../components/home/mostPopular";
 import Hero from "../components/home/hero";
 
 
+
 const HomePage = () => {
+
   return (
     <Layout>
       <Hero/>
@@ -18,3 +20,13 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
+// export async function getStaticProps() {
+//   const { data } = await shopifyFetch(productsQuery);
+//   return {
+//     props: {
+//       products: data.products,
+//     }
+//   }
+// };
